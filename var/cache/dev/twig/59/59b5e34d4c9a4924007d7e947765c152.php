@@ -79,39 +79,42 @@ transform: translate(-50%, -50%);\">
         // line 20
         if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["mess"]) || array_key_exists("mess", $context) ? $context["mess"] : (function () { throw new RuntimeError('Variable "mess" does not exist.', 20, $this->source); })()), "sender", [], "any", false, false, false, 20), "name", [], "any", false, false, false, 20)) {
             // line 21
-            echo "            <p>From: <a style=\"text-decoration: none;font-weight: bold;\" href=\"/profiles/";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["mess"]) || array_key_exists("mess", $context) ? $context["mess"] : (function () { throw new RuntimeError('Variable "mess" does not exist.', 21, $this->source); })()), "sender", [], "any", false, false, false, 21), "id", [], "any", false, false, false, 21), "html", null, true);
+            echo "            <p>From: <a style=\"text-decoration: none;font-weight: bold;\" 
+            
+                href=\"";
+            // line 23
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profile", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["mess"]) || array_key_exists("mess", $context) ? $context["mess"] : (function () { throw new RuntimeError('Variable "mess" does not exist.', 23, $this->source); })()), "sender", [], "any", false, false, false, 23), "id", [], "any", false, false, false, 23)]), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["mess"]) || array_key_exists("mess", $context) ? $context["mess"] : (function () { throw new RuntimeError('Variable "mess" does not exist.', 21, $this->source); })()), "sender", [], "any", false, false, false, 21), "name", [], "any", false, false, false, 21), "html", null, true);
-            echo "</a></p> 
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["mess"]) || array_key_exists("mess", $context) ? $context["mess"] : (function () { throw new RuntimeError('Variable "mess" does not exist.', 23, $this->source); })()), "sender", [], "any", false, false, false, 23), "name", [], "any", false, false, false, 23), "html", null, true);
+            echo "  </a></p> 
             ";
         } else {
-            // line 23
+            // line 25
             echo "            <p>From: ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["mess"]) || array_key_exists("mess", $context) ? $context["mess"] : (function () { throw new RuntimeError('Variable "mess" does not exist.', 23, $this->source); })()), "email", [], "any", false, false, false, 23), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["mess"]) || array_key_exists("mess", $context) ? $context["mess"] : (function () { throw new RuntimeError('Variable "mess" does not exist.', 25, $this->source); })()), "email", [], "any", false, false, false, 25), "html", null, true);
             echo "</p> 
             ";
         }
-        // line 25
-        echo "            <p>To: <a style=\"text-decoration: none;font-weight: bold;\" href=\"/profiles/";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["mess"]) || array_key_exists("mess", $context) ? $context["mess"] : (function () { throw new RuntimeError('Variable "mess" does not exist.', 25, $this->source); })()), "recipient", [], "any", false, false, false, 25), "id", [], "any", false, false, false, 25), "html", null, true);
+        // line 27
+        echo "            <p>To: <a style=\"text-decoration: none;font-weight: bold;\" href=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profile", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["mess"]) || array_key_exists("mess", $context) ? $context["mess"] : (function () { throw new RuntimeError('Variable "mess" does not exist.', 27, $this->source); })()), "recipient", [], "any", false, false, false, 27), "id", [], "any", false, false, false, 27)]), "html", null, true);
         echo "\">";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["mess"]) || array_key_exists("mess", $context) ? $context["mess"] : (function () { throw new RuntimeError('Variable "mess" does not exist.', 25, $this->source); })()), "recipient", [], "any", false, false, false, 25), "name", [], "any", false, false, false, 25), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["mess"]) || array_key_exists("mess", $context) ? $context["mess"] : (function () { throw new RuntimeError('Variable "mess" does not exist.', 27, $this->source); })()), "recipient", [], "any", false, false, false, 27), "name", [], "any", false, false, false, 27), "html", null, true);
         echo "</a></p> 
             <p >Subject: ";
-        // line 26
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["mess"]) || array_key_exists("mess", $context) ? $context["mess"] : (function () { throw new RuntimeError('Variable "mess" does not exist.', 26, $this->source); })()), "subject", [], "any", false, false, false, 26), "html", null, true);
+        // line 28
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["mess"]) || array_key_exists("mess", $context) ? $context["mess"] : (function () { throw new RuntimeError('Variable "mess" does not exist.', 28, $this->source); })()), "subject", [], "any", false, false, false, 28), "html", null, true);
         echo "</p>
             <hr>
             <p>";
-        // line 28
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["mess"]) || array_key_exists("mess", $context) ? $context["mess"] : (function () { throw new RuntimeError('Variable "mess" does not exist.', 28, $this->source); })()), "text", [], "any", false, false, false, 28), "html", null, true);
+        // line 30
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["mess"]) || array_key_exists("mess", $context) ? $context["mess"] : (function () { throw new RuntimeError('Variable "mess" does not exist.', 30, $this->source); })()), "text", [], "any", false, false, false, 30), "html", null, true);
         echo "   </p>
         </div>
     </div>
     <div class=\"w3-container w3-center \">
         ";
-        // line 37
+        // line 39
         echo "
     </div>
 </div>
@@ -147,7 +150,7 @@ transform: translate(-50%, -50%);\">
      */
     public function getDebugInfo()
     {
-        return array (  115 => 37,  108 => 28,  103 => 26,  96 => 25,  90 => 23,  82 => 21,  80 => 20,  75 => 18,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  118 => 39,  111 => 30,  106 => 28,  99 => 27,  93 => 25,  86 => 23,  82 => 21,  80 => 20,  75 => 18,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -172,11 +175,13 @@ transform: translate(-50%, -50%);\">
             <p class=\"w3-right\">{{(mess.created.date|date(\"d/m/Y H:i\")) }}</p>
 
             {% if mess.sender.name %}
-            <p>From: <a style=\"text-decoration: none;font-weight: bold;\" href=\"/profiles/{{mess.sender.id}}\">{{mess.sender.name}}</a></p> 
+            <p>From: <a style=\"text-decoration: none;font-weight: bold;\" 
+            
+                href=\"{{ path ('profile', { 'id' : mess.sender.id } ) }}\">{{mess.sender.name}}  </a></p> 
             {% else %}
             <p>From: {{mess.email}}</p> 
             {% endif %}
-            <p>To: <a style=\"text-decoration: none;font-weight: bold;\" href=\"/profiles/{{mess.recipient.id}}\">{{mess.recipient.name}}</a></p> 
+            <p>To: <a style=\"text-decoration: none;font-weight: bold;\" href=\"{{ path ('profile', { 'id' : mess.recipient.id } ) }}\">{{mess.recipient.name}}</a></p> 
             <p >Subject: {{mess.subject}}</p>
             <hr>
             <p>{{mess.text }}   </p>
@@ -196,6 +201,6 @@ transform: translate(-50%, -50%);\">
 
 
 
-{% endblock %}", "message/index.html.twig", "/Users/andriiirkha/Documents/Symfony/blog-front/blog-front/templates/message/index.html.twig");
+{% endblock %}", "message/index.html.twig", "/Users/andriiirkha/Documents/Symfony/project/blog-front/templates/message/index.html.twig");
     }
 }

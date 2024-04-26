@@ -87,7 +87,7 @@ class BlogController extends AbstractController
 
 
 
-    #[Route('/blogs/create', name: 'create_blog', methods: ['POST', "GET"])]
+    #[Route('/blogs/create', name: 'blog-create', methods: ['POST', "GET"])]
     public function create(Request $request)
     {
     
@@ -154,7 +154,7 @@ class BlogController extends AbstractController
 
             $res = Utils::makeRequest($token, $url, 'POST', json_encode($data) );
             // dd($res);
-            return $this->redirect('/blogs/' . $id);
+            return $this->redirectToRoute('blogs', [ 'id' => $id ] );
         }
 
         $context = [
@@ -170,7 +170,7 @@ class BlogController extends AbstractController
 
 
 
-    #[Route('/blogs/edit/{id}', name: 'edit-blog')]
+    #[Route('/blogs/edit/{id}', name: 'blog-edit')]
     public function edit($id, Request $request) : Response 
     {
         $blog = Utils::getMyUrl('blogs/' . $id );
@@ -214,7 +214,7 @@ class BlogController extends AbstractController
             }
             return $this->redirectToRoute('account');
 
-            return $this->redirect('account/' . $id);
+            // return $this->redirect('account/' . $id);
 
             // dd("POST");
         }
@@ -241,7 +241,7 @@ class BlogController extends AbstractController
 
 
     
-    #[Route('/blogs/delete/{id}', methods: ['GET', 'DELETE'], name: 'delete_blog')]
+    #[Route('/blogs/delete/{id}', methods: ['GET', 'DELETE'], name: 'blog-delete')]
     public function delete($id) : Response
     {
         $session = $this->requestStack->getSession();

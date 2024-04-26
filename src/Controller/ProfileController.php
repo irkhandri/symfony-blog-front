@@ -270,7 +270,7 @@ class ProfileController extends AbstractController
         // return $this->render('profiles/profile.html.twig', $context);
     }
 
-    #[Route('/profiles/edit/{id}')]
+    #[Route('/profiles/edit/{id}' , name:'edit-profile')]
     public function edit($id, Request $request) : Response
     {
         $session = $this->requestStack->getSession();

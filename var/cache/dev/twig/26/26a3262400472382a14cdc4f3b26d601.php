@@ -122,15 +122,17 @@ class __TwigTemplate_cb98c6f9b15bb8f65f79fef81a26585d extends Template
             // line 58
             echo "                        ";
             // line 59
-            echo "                                <a href=\"/create-message/";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["profile"], "id", [], "any", false, false, false, 59), "html", null, true);
+            echo "                        
+                                <a href=\"";
+            // line 60
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("create-message", ["id" => twig_get_attribute($this->env, $this->source, $context["profile"], "id", [], "any", false, false, false, 60)]), "html", null, true);
             echo "\" class=\"w3-button w3-theme w3-hover-gray w3-margin\"><i class=\"fa fa-envelope\"></i> Send Message</a>
                         ";
-            // line 61
-            echo "                                                 
-                        <a href=\"/profiles/";
             // line 62
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["profile"], "id", [], "any", false, false, false, 62), "html", null, true);
+            echo "                                                 
+                        <a href=\"";
+            // line 63
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profile", ["id" => twig_get_attribute($this->env, $this->source, $context["profile"], "id", [], "any", false, false, false, 63)]), "html", null, true);
             echo "\">
                             <button  class=\"w3-button w3-theme w3-margin\"><i class=\"fa fa-info\"></i> About </button>
                         </a>
@@ -142,7 +144,7 @@ class __TwigTemplate_cb98c6f9b15bb8f65f79fef81a26585d extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['profile'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 69
+        // line 70
         echo "
             </div>
             
@@ -150,7 +152,7 @@ class __TwigTemplate_cb98c6f9b15bb8f65f79fef81a26585d extends Template
 
 
         ";
-        // line 76
+        // line 77
         echo "   
 </div>
 
@@ -183,7 +185,7 @@ class __TwigTemplate_cb98c6f9b15bb8f65f79fef81a26585d extends Template
      */
     public function getDebugInfo()
     {
-        return array (  154 => 76,  146 => 69,  133 => 62,  130 => 61,  125 => 59,  123 => 58,  120 => 51,  117 => 49,  113 => 47,  107 => 44,  103 => 43,  99 => 41,  95 => 40,  59 => 6,  52 => 5,  35 => 1,);
+        return array (  156 => 77,  148 => 70,  135 => 63,  132 => 62,  128 => 60,  125 => 59,  123 => 58,  120 => 51,  117 => 49,  113 => 47,  107 => 44,  103 => 43,  99 => 41,  95 => 40,  59 => 6,  52 => 5,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -246,10 +248,11 @@ class __TwigTemplate_cb98c6f9b15bb8f65f79fef81a26585d extends Template
                        
                             {% endif %} #}
                         {# {% else %} #}
-                                <a href=\"/create-message/{{profile.id}}\" class=\"w3-button w3-theme w3-hover-gray w3-margin\"><i class=\"fa fa-envelope\"></i> Send Message</a>
+                        
+                                <a href=\"{{ path ('create-message', { 'id' : profile.id } ) }}\" class=\"w3-button w3-theme w3-hover-gray w3-margin\"><i class=\"fa fa-envelope\"></i> Send Message</a>
                         {# {% endif %}  #}
                                                  
-                        <a href=\"/profiles/{{profile.id}}\">
+                        <a href=\"{{ path ('profile', { 'id' : profile.id } ) }}\">
                             <button  class=\"w3-button w3-theme w3-margin\"><i class=\"fa fa-info\"></i> About </button>
                         </a>
                     </div>
@@ -269,6 +272,6 @@ class __TwigTemplate_cb98c6f9b15bb8f65f79fef81a26585d extends Template
 
 
 {% endblock %}
-", "profiles/profiles.html.twig", "/Users/andriiirkha/Documents/Symfony/project/blog-front/blog-front/templates/profiles/profiles.html.twig");
+", "profiles/profiles.html.twig", "/Users/andriiirkha/Documents/Symfony/project/blog-front/templates/profiles/profiles.html.twig");
     }
 }

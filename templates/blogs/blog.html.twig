@@ -115,7 +115,7 @@
 
                   {% elseif not inside  %}
                 <h3> You can not comment, you must log in</h3>
-                <a href="/login" class="w3-button w3-theme  "><i class="fa fa"></i> Log In</a>
+                <a href="{{ path ('login')}}" class="w3-button w3-theme  "><i class="fa fa"></i> Log In</a>
 
                    {% endif %}
 
@@ -137,7 +137,11 @@
                           <div class="w3-col m10">
                               <p class="w3-right ">{{(comment.created.date|date("d/m/Y H:i")) }}</p>
                       
-                              <a href="/profiles/{{comment.profile.id}}" ><h4>{{comment.profile.name}}</h4></a>
+
+
+                              <a href="{{ path ('profile', { 'id' : comment.profile.id } ) }}" ><h4>{{comment.profile.name}}</h4></a>
+
+                              {# <a href="/profiles/{{comment.profile.id}}" ><h4>{{comment.profile.name}}</h4></a> #}
                               <p class="w3-right w3-opacity w3-text-theme">I {{comment.rate}} it .</p>
                               <p>{{comment.description}}</p>
                               

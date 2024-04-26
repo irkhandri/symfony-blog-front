@@ -208,7 +208,10 @@ class __TwigTemplate_8aec2e75f8e81a989f06eaef85a6b044 extends Template
 (isset($context["inside"]) || array_key_exists("inside", $context) ? $context["inside"] : (function () { throw new RuntimeError('Variable "inside" does not exist.', 116, $this->source); })())) {
             // line 117
             echo "                <h3> You can not comment, you must log in</h3>
-                <a href=\"/login\" class=\"w3-button w3-theme  \"><i class=\"fa fa\"></i> Log In</a>
+                <a href=\"";
+            // line 118
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
+            echo "\" class=\"w3-button w3-theme  \"><i class=\"fa fa\"></i> Log In</a>
 
                    ";
         }
@@ -246,19 +249,23 @@ class __TwigTemplate_8aec2e75f8e81a989f06eaef85a6b044 extends Template
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["comment"], "created", [], "any", false, false, false, 138), "date", [], "any", false, false, false, 138), "d/m/Y H:i"), "html", null, true);
             echo "</p>
                       
-                              <a href=\"/profiles/";
-            // line 140
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["comment"], "profile", [], "any", false, false, false, 140), "id", [], "any", false, false, false, 140), "html", null, true);
+
+
+                              <a href=\"";
+            // line 142
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profile", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["comment"], "profile", [], "any", false, false, false, 142), "id", [], "any", false, false, false, 142)]), "html", null, true);
             echo "\" ><h4>";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["comment"], "profile", [], "any", false, false, false, 140), "name", [], "any", false, false, false, 140), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["comment"], "profile", [], "any", false, false, false, 142), "name", [], "any", false, false, false, 142), "html", null, true);
             echo "</h4></a>
-                              <p class=\"w3-right w3-opacity w3-text-theme\">I ";
-            // line 141
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "rate", [], "any", false, false, false, 141), "html", null, true);
+
+                              ";
+            // line 145
+            echo "                              <p class=\"w3-right w3-opacity w3-text-theme\">I ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "rate", [], "any", false, false, false, 145), "html", null, true);
             echo " it .</p>
                               <p>";
-            // line 142
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "description", [], "any", false, false, false, 142), "html", null, true);
+            // line 146
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "description", [], "any", false, false, false, 146), "html", null, true);
             echo "</p>
                               
                           </div>
@@ -269,7 +276,7 @@ class __TwigTemplate_8aec2e75f8e81a989f06eaef85a6b044 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comment'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 148
+        // line 152
         echo "  
           </div>
   
@@ -349,7 +356,7 @@ class __TwigTemplate_8aec2e75f8e81a989f06eaef85a6b044 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  273 => 148,  261 => 142,  257 => 141,  251 => 140,  246 => 138,  240 => 135,  233 => 130,  229 => 129,  223 => 125,  221 => 124,  219 => 123,  216 => 121,  210 => 117,  208 => 116,  183 => 93,  180 => 91,  178 => 90,  172 => 86,  170 => 85,  161 => 79,  156 => 77,  148 => 72,  141 => 67,  132 => 65,  128 => 64,  122 => 61,  119 => 60,  114 => 47,  107 => 40,  84 => 23,  82 => 22,  78 => 19,  74 => 17,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  280 => 152,  268 => 146,  263 => 145,  256 => 142,  249 => 138,  243 => 135,  236 => 130,  232 => 129,  226 => 125,  224 => 124,  222 => 123,  219 => 121,  213 => 118,  210 => 117,  208 => 116,  183 => 93,  180 => 91,  178 => 90,  172 => 86,  170 => 85,  161 => 79,  156 => 77,  148 => 72,  141 => 67,  132 => 65,  128 => 64,  122 => 61,  119 => 60,  114 => 47,  107 => 40,  84 => 23,  82 => 22,  78 => 19,  74 => 17,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -471,7 +478,7 @@ class __TwigTemplate_8aec2e75f8e81a989f06eaef85a6b044 extends Template
 
                   {% elseif not inside  %}
                 <h3> You can not comment, you must log in</h3>
-                <a href=\"/login\" class=\"w3-button w3-theme  \"><i class=\"fa fa\"></i> Log In</a>
+                <a href=\"{{ path ('login')}}\" class=\"w3-button w3-theme  \"><i class=\"fa fa\"></i> Log In</a>
 
                    {% endif %}
 
@@ -493,7 +500,11 @@ class __TwigTemplate_8aec2e75f8e81a989f06eaef85a6b044 extends Template
                           <div class=\"w3-col m10\">
                               <p class=\"w3-right \">{{(comment.created.date|date(\"d/m/Y H:i\")) }}</p>
                       
-                              <a href=\"/profiles/{{comment.profile.id}}\" ><h4>{{comment.profile.name}}</h4></a>
+
+
+                              <a href=\"{{ path ('profile', { 'id' : comment.profile.id } ) }}\" ><h4>{{comment.profile.name}}</h4></a>
+
+                              {# <a href=\"/profiles/{{comment.profile.id}}\" ><h4>{{comment.profile.name}}</h4></a> #}
                               <p class=\"w3-right w3-opacity w3-text-theme\">I {{comment.rate}} it .</p>
                               <p>{{comment.description}}</p>
                               
@@ -553,6 +564,6 @@ class __TwigTemplate_8aec2e75f8e81a989f06eaef85a6b044 extends Template
   </script> 
 
 
-{% endblock %}", "blogs/blog.html.twig", "/Users/andriiirkha/Documents/Symfony/project/blog-front/blog-front/templates/blogs/blog.html.twig");
+{% endblock %}", "blogs/blog.html.twig", "/Users/andriiirkha/Documents/Symfony/project/blog-front/templates/blogs/blog.html.twig");
     }
 }

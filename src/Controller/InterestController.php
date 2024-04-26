@@ -20,7 +20,7 @@ class InterestController extends AbstractController
         // $this->session = $requestStack->getSession();
     }
 
-    #[Route('/interest-create', name: 'create-interest')]
+    #[Route('/interest-create', name: 'interest-create')]
     public function index(Request $request): Response
     {
         $session = $this->requestStack->getSession();
@@ -46,7 +46,7 @@ class InterestController extends AbstractController
 
 
 
-    #[Route('/interest-edit/{id}', name: 'edit-interest')]
+    #[Route('/interest-edit/{id}', name: 'interest-edit')]
     public function edit(Request $request, $id): Response
     {
         $interest =  Utils::getMyUrl('interests/' . $id );
@@ -74,7 +74,7 @@ class InterestController extends AbstractController
     }
 
 
-    #[Route('/interest-delete/{id}', name: 'del-interest')]
+    #[Route('/interest-delete/{id}', name: 'interest-delete')]
     public function del(Request $request, $id)
     {
         $session = $this->requestStack->getSession();

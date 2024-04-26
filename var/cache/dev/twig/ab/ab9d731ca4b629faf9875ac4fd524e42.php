@@ -151,8 +151,8 @@ class __TwigTemplate_336b74f33c2750c40f0d2d40318553ae extends Template
         // line 55
         if (((isset($context["page"]) || array_key_exists("page", $context) ? $context["page"] : (function () { throw new RuntimeError('Variable "page" does not exist.', 55, $this->source); })()) == "myPage")) {
             // line 56
-            echo "                    <a href=\"/profiles/edit/";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["profile"]) || array_key_exists("profile", $context) ? $context["profile"] : (function () { throw new RuntimeError('Variable "profile" does not exist.', 56, $this->source); })()), "id", [], "any", false, false, false, 56), "html", null, true);
+            echo "                    <a href=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("edit-profile", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["profile"]) || array_key_exists("profile", $context) ? $context["profile"] : (function () { throw new RuntimeError('Variable "profile" does not exist.', 56, $this->source); })()), "id", [], "any", false, false, false, 56)]), "html", null, true);
             echo "\" class=\"w3-button w3-theme w3-right w3-right\"><i class=\"fa fa-edit\"></i> Edit Profile</a>
                     ";
         }
@@ -167,14 +167,15 @@ class __TwigTemplate_336b74f33c2750c40f0d2d40318553ae extends Template
         if (((isset($context["page"]) || array_key_exists("page", $context) ? $context["page"] : (function () { throw new RuntimeError('Variable "page" does not exist.', 63, $this->source); })()) != "myPage")) {
             // line 64
             echo "                <div class=\" w3-white w3-margin w3-padding w3-center\">
-                    <a href=\"/create-message/";
-            // line 65
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["profile"]) || array_key_exists("profile", $context) ? $context["profile"] : (function () { throw new RuntimeError('Variable "profile" does not exist.', 65, $this->source); })()), "id", [], "any", false, false, false, 65), "html", null, true);
+                
+                    <a href=\"";
+            // line 66
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("create-message", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["profile"]) || array_key_exists("profile", $context) ? $context["profile"] : (function () { throw new RuntimeError('Variable "profile" does not exist.', 66, $this->source); })()), "id", [], "any", false, false, false, 66)]), "html", null, true);
             echo "\" class=\"w3-button w3-theme w3-margin\"><i class=\"fa fa-envelope\"></i> Send Message</a>
                 </div>
                 ";
         }
-        // line 68
+        // line 69
         echo "
         
             </div>
@@ -186,8 +187,8 @@ class __TwigTemplate_336b74f33c2750c40f0d2d40318553ae extends Template
                 <div class=\"w3-container \">
                     <h2>About me</h2>
                     <p> ";
-        // line 78
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["profile"]) || array_key_exists("profile", $context) ? $context["profile"] : (function () { throw new RuntimeError('Variable "profile" does not exist.', 78, $this->source); })()), "bio", [], "any", false, false, false, 78), "html", null, true);
+        // line 79
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["profile"]) || array_key_exists("profile", $context) ? $context["profile"] : (function () { throw new RuntimeError('Variable "profile" does not exist.', 79, $this->source); })()), "bio", [], "any", false, false, false, 79), "html", null, true);
         echo "</p>
                 </div>
             </div>
@@ -197,49 +198,53 @@ class __TwigTemplate_336b74f33c2750c40f0d2d40318553ae extends Template
             <div class=\"w3-card w3-round w3-white  \">
 
                     ";
-        // line 86
-        if (((isset($context["page"]) || array_key_exists("page", $context) ? $context["page"] : (function () { throw new RuntimeError('Variable "page" does not exist.', 86, $this->source); })()) == "myPage")) {
-            // line 87
-            echo "                        <a class=\"w3-button w3-theme w3-right\" href=\"/interest-create\"><i class=\"fa fa-plus\"></i>Add Interest</a>
+        // line 87
+        if (((isset($context["page"]) || array_key_exists("page", $context) ? $context["page"] : (function () { throw new RuntimeError('Variable "page" does not exist.', 87, $this->source); })()) == "myPage")) {
+            // line 88
+            echo "                        <a class=\"w3-button w3-theme w3-right\" href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("interest-create");
+            echo "\"><i class=\"fa fa-plus\"></i>Add Interest</a>
                     ";
         }
-        // line 89
+        // line 90
         echo "
                 <div class=\"w3-container \">
                     <h2>Interests</h2>
                 
                     ";
-        // line 93
+        // line 94
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["profile"]) || array_key_exists("profile", $context) ? $context["profile"] : (function () { throw new RuntimeError('Variable "profile" does not exist.', 93, $this->source); })()), "interests", [], "any", false, false, false, 93));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["profile"]) || array_key_exists("profile", $context) ? $context["profile"] : (function () { throw new RuntimeError('Variable "profile" does not exist.', 94, $this->source); })()), "interests", [], "any", false, false, false, 94));
         foreach ($context['_seq'] as $context["_key"] => $context["interest"]) {
-            // line 94
+            // line 95
             echo "                        ";
-            if (((isset($context["page"]) || array_key_exists("page", $context) ? $context["page"] : (function () { throw new RuntimeError('Variable "page" does not exist.', 94, $this->source); })()) == "myPage")) {
-                // line 95
-                echo "                            <a href=\"/interest-delete/";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["interest"], "id", [], "any", false, false, false, 95), "html", null, true);
-                echo "\"   class=\"w3-button w3-red w3-right \" style=\"margin-left: 10px;\"><i class=\"fa fa-eraser\"></i> Delete</a>
-                            <a href=\"/interest-edit/";
+            if (((isset($context["page"]) || array_key_exists("page", $context) ? $context["page"] : (function () { throw new RuntimeError('Variable "page" does not exist.', 95, $this->source); })()) == "myPage")) {
                 // line 96
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["interest"], "id", [], "any", false, false, false, 96), "html", null, true);
+                echo "                        
+                            <a href=\"";
+                // line 97
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("interest-delete", ["id" => twig_get_attribute($this->env, $this->source, $context["interest"], "id", [], "any", false, false, false, 97)]), "html", null, true);
+                echo "\"   class=\"w3-button w3-red w3-right \" style=\"margin-left: 10px;\"><i class=\"fa fa-eraser\"></i> Delete</a>
+                            <a href=\"";
+                // line 98
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("interest-edit", ["id" => twig_get_attribute($this->env, $this->source, $context["interest"], "id", [], "any", false, false, false, 98)]), "html", null, true);
                 echo "\" class=\"w3-button w3-theme w3-right \"><i class=\"fa fa-edit\"></i> Edit</a>
                         ";
             }
-            // line 98
+            // line 100
             echo "                        <p class=\" w3-tag  w3-text-white  w3-theme\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["interest"], "name", [], "any", false, false, false, 98), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["interest"], "name", [], "any", false, false, false, 100), "html", null, true);
             echo "</p> 
                         <p> ";
-            // line 99
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["interest"], "description", [], "any", false, false, false, 99), "html", null, true);
+            // line 101
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["interest"], "description", [], "any", false, false, false, 101), "html", null, true);
             echo "</p>
                     ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['interest'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 100
+        // line 102
         echo " 
                 </div>
             </div>
@@ -251,98 +256,101 @@ class __TwigTemplate_336b74f33c2750c40f0d2d40318553ae extends Template
 
 
             ";
-        // line 111
+        // line 113
         echo "            ";
-        if (((isset($context["page"]) || array_key_exists("page", $context) ? $context["page"] : (function () { throw new RuntimeError('Variable "page" does not exist.', 111, $this->source); })()) == "myPage")) {
-            // line 112
+        if (((isset($context["page"]) || array_key_exists("page", $context) ? $context["page"] : (function () { throw new RuntimeError('Variable "page" does not exist.', 113, $this->source); })()) == "myPage")) {
+            // line 114
             echo "                <h2 class=\"w3-text-theme w3-center\"> My blogs</h2>
-                <a class=\"w3-button w3-margin-bottom w3-margin-right w3-theme w3-right\" href=\"/blogs/create\"><i class=\"fa fa-plus\"></i>Addd Blog</a>
+                <a class=\"w3-button w3-margin-bottom w3-margin-right w3-theme w3-right\" href=\"";
+            // line 115
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("blog-create");
+            echo "\"><i class=\"fa fa-plus\"></i>Addd Blog</a>
 
             ";
         } else {
-            // line 116
+            // line 118
             echo "                <h2 class=\"w3-text-theme w3-center\"> ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["profile"]) || array_key_exists("profile", $context) ? $context["profile"] : (function () { throw new RuntimeError('Variable "profile" does not exist.', 116, $this->source); })()), "name", [], "any", false, false, false, 116), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["profile"]) || array_key_exists("profile", $context) ? $context["profile"] : (function () { throw new RuntimeError('Variable "profile" does not exist.', 118, $this->source); })()), "name", [], "any", false, false, false, 118), "html", null, true);
             echo " blogs</h2>
             ";
         }
-        // line 118
+        // line 120
         echo "
 
             ";
-        // line 120
+        // line 122
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["profile"]) || array_key_exists("profile", $context) ? $context["profile"] : (function () { throw new RuntimeError('Variable "profile" does not exist.', 120, $this->source); })()), "blogs", [], "any", false, false, false, 120));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["profile"]) || array_key_exists("profile", $context) ? $context["profile"] : (function () { throw new RuntimeError('Variable "profile" does not exist.', 122, $this->source); })()), "blogs", [], "any", false, false, false, 122));
         foreach ($context['_seq'] as $context["_key"] => $context["blog"]) {
-            // line 121
+            // line 123
             echo "
             <div class=\"w3-container w3-card w3-white w3-round w3-margin-bottom\"><br>
 
                 ";
-            // line 124
-            if (((isset($context["page"]) || array_key_exists("page", $context) ? $context["page"] : (function () { throw new RuntimeError('Variable "page" does not exist.', 124, $this->source); })()) == "myPage")) {
-                // line 125
-                echo "                 <a href=\"/blogs/edit/";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["blog"], "id", [], "any", false, false, false, 125), "html", null, true);
+            // line 126
+            if (((isset($context["page"]) || array_key_exists("page", $context) ? $context["page"] : (function () { throw new RuntimeError('Variable "page" does not exist.', 126, $this->source); })()) == "myPage")) {
+                // line 127
+                echo "                 <a href=\"";
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("blog-edit", ["id" => twig_get_attribute($this->env, $this->source, $context["blog"], "id", [], "any", false, false, false, 127)]), "html", null, true);
                 echo "\" class=\"w3-button w3-theme \"><i class=\"fa fa-edit\"></i> Edit</a>
-                <a href=\"/blogs/delete/";
-                // line 126
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["blog"], "id", [], "any", false, false, false, 126), "html", null, true);
+                <a href=\"";
+                // line 128
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("blog-delete", ["id" => twig_get_attribute($this->env, $this->source, $context["blog"], "id", [], "any", false, false, false, 128)]), "html", null, true);
                 echo "\"   class=\"w3-button w3-red  \" style=\"margin-right: 10px;\"><i class=\"fa fa-eraser\"></i> Delete</a>
                 ";
             }
-            // line 128
+            // line 130
             echo "                <div >
                     <br>
 
                     ";
-            // line 144
+            // line 146
             echo "    
                         <hr>
                     <div class=\"w3-row-padding\" >
                         <div >
                             <img src=\"";
-            // line 148
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["blog"], "imageUrl", [], "any", false, false, false, 148), "html", null, true);
+            // line 150
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["blog"], "imageUrl", [], "any", false, false, false, 150), "html", null, true);
             echo "\" style=\"width:100%\" alt=\"Logo\" class=\"w3-margin-bottom\">
                         </div>
                     </div>
                     <p>
                         ";
-            // line 152
+            // line 154
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["blog"], "tags", [], "any", false, false, false, 152));
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["blog"], "tags", [], "any", false, false, false, 154));
             foreach ($context['_seq'] as $context["_key"] => $context["tag"]) {
-                // line 153
+                // line 155
                 echo "                        <span class=\"w3-tag w3-small w3-theme\">#";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["tag"], "name", [], "any", false, false, false, 153), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["tag"], "name", [], "any", false, false, false, 155), "html", null, true);
                 echo "</span>
                         ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['tag'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 155
+            // line 157
             echo "                        
                     </p>
                     <h3 class=\"w3-center\">";
-            // line 157
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["blog"], "title", [], "any", false, false, false, 157), "html", null, true);
+            // line 159
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["blog"], "title", [], "any", false, false, false, 159), "html", null, true);
             echo "</h3>
                     <p>";
-            // line 158
-            echo twig_escape_filter($this->env, twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["blog"], "description", [], "any", false, false, false, 158), 0, 400), "html", null, true);
+            // line 160
+            echo twig_escape_filter($this->env, twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["blog"], "description", [], "any", false, false, false, 160), 0, 400), "html", null, true);
             echo "...</p>
                       
 
                       <!-- Likes --> 
                     ";
-            // line 168
+            // line 170
             echo "
 
-                    <a href=\"/blogs/";
-            // line 170
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["blog"], "id", [], "any", false, false, false, 170), "html", null, true);
+                    <a href=\"";
+            // line 172
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("blog", ["id" => twig_get_attribute($this->env, $this->source, $context["blog"], "id", [], "any", false, false, false, 172)]), "html", null, true);
             echo "\" type=\"button\" class=\"w3-button w3-theme w3-center w3-margin-bottom\"><i class=\"fa fa-info\"></i> Show more</a> 
       
     
@@ -357,7 +365,7 @@ class __TwigTemplate_336b74f33c2750c40f0d2d40318553ae extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['blog'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 179
+        // line 181
         echo " 
 
              
@@ -398,7 +406,7 @@ class __TwigTemplate_336b74f33c2750c40f0d2d40318553ae extends Template
      */
     public function getDebugInfo()
     {
-        return array (  361 => 179,  345 => 170,  341 => 168,  334 => 158,  330 => 157,  326 => 155,  317 => 153,  313 => 152,  306 => 148,  300 => 144,  295 => 128,  290 => 126,  285 => 125,  283 => 124,  278 => 121,  274 => 120,  270 => 118,  264 => 116,  258 => 112,  255 => 111,  243 => 100,  235 => 99,  230 => 98,  225 => 96,  220 => 95,  217 => 94,  213 => 93,  207 => 89,  203 => 87,  201 => 86,  190 => 78,  178 => 68,  172 => 65,  169 => 64,  167 => 63,  160 => 58,  154 => 56,  152 => 55,  147 => 52,  144 => 48,  138 => 46,  136 => 45,  133 => 44,  130 => 40,  127 => 36,  121 => 34,  119 => 33,  116 => 32,  113 => 30,  107 => 28,  105 => 27,  102 => 26,  96 => 24,  94 => 23,  89 => 21,  86 => 20,  80 => 18,  78 => 17,  73 => 15,  68 => 13,  59 => 6,  52 => 5,  35 => 2,);
+        return array (  369 => 181,  353 => 172,  349 => 170,  342 => 160,  338 => 159,  334 => 157,  325 => 155,  321 => 154,  314 => 150,  308 => 146,  303 => 130,  298 => 128,  293 => 127,  291 => 126,  286 => 123,  282 => 122,  278 => 120,  272 => 118,  266 => 115,  263 => 114,  260 => 113,  248 => 102,  240 => 101,  235 => 100,  230 => 98,  226 => 97,  223 => 96,  220 => 95,  216 => 94,  210 => 90,  204 => 88,  202 => 87,  191 => 79,  179 => 69,  173 => 66,  169 => 64,  167 => 63,  160 => 58,  154 => 56,  152 => 55,  147 => 52,  144 => 48,  138 => 46,  136 => 45,  133 => 44,  130 => 40,  127 => 36,  121 => 34,  119 => 33,  116 => 32,  113 => 30,  107 => 28,  105 => 27,  102 => 26,  96 => 24,  94 => 23,  89 => 21,  86 => 20,  80 => 18,  78 => 17,  73 => 15,  68 => 13,  59 => 6,  52 => 5,  35 => 2,);
     }
 
     public function getSourceContext()
@@ -458,7 +466,7 @@ class __TwigTemplate_336b74f33c2750c40f0d2d40318553ae extends Template
                       <br> 
 
                     {%  if page =='myPage' %}
-                    <a href=\"/profiles/edit/{{profile.id}}\" class=\"w3-button w3-theme w3-right w3-right\"><i class=\"fa fa-edit\"></i> Edit Profile</a>
+                    <a href=\"{{ path ('edit-profile', { 'id' : profile.id } ) }}\" class=\"w3-button w3-theme w3-right w3-right\"><i class=\"fa fa-edit\"></i> Edit Profile</a>
                     {% endif %}
 
                 </div>
@@ -467,7 +475,8 @@ class __TwigTemplate_336b74f33c2750c40f0d2d40318553ae extends Template
                 <!-- Send Message -->
                 {% if page != 'myPage'%}
                 <div class=\" w3-white w3-margin w3-padding w3-center\">
-                    <a href=\"/create-message/{{profile.id}}\" class=\"w3-button w3-theme w3-margin\"><i class=\"fa fa-envelope\"></i> Send Message</a>
+                
+                    <a href=\"{{ path ('create-message', { 'id' : profile.id } ) }}\" class=\"w3-button w3-theme w3-margin\"><i class=\"fa fa-envelope\"></i> Send Message</a>
                 </div>
                 {% endif %}
 
@@ -489,7 +498,7 @@ class __TwigTemplate_336b74f33c2750c40f0d2d40318553ae extends Template
             <div class=\"w3-card w3-round w3-white  \">
 
                     {% if page  == 'myPage' %}
-                        <a class=\"w3-button w3-theme w3-right\" href=\"/interest-create\"><i class=\"fa fa-plus\"></i>Add Interest</a>
+                        <a class=\"w3-button w3-theme w3-right\" href=\"{{ path ('interest-create')}}\"><i class=\"fa fa-plus\"></i>Add Interest</a>
                     {% endif %}
 
                 <div class=\"w3-container \">
@@ -497,8 +506,9 @@ class __TwigTemplate_336b74f33c2750c40f0d2d40318553ae extends Template
                 
                     {% for interest in profile.interests %}
                         {% if page  == 'myPage' %}
-                            <a href=\"/interest-delete/{{interest.id}}\"   class=\"w3-button w3-red w3-right \" style=\"margin-left: 10px;\"><i class=\"fa fa-eraser\"></i> Delete</a>
-                            <a href=\"/interest-edit/{{interest.id}}\" class=\"w3-button w3-theme w3-right \"><i class=\"fa fa-edit\"></i> Edit</a>
+                        
+                            <a href=\"{{ path ('interest-delete', { 'id' : interest.id } ) }}\"   class=\"w3-button w3-red w3-right \" style=\"margin-left: 10px;\"><i class=\"fa fa-eraser\"></i> Delete</a>
+                            <a href=\"{{ path ('interest-edit', { 'id' : interest.id } ) }}\" class=\"w3-button w3-theme w3-right \"><i class=\"fa fa-edit\"></i> Edit</a>
                         {% endif %}
                         <p class=\" w3-tag  w3-text-white  w3-theme\">{{interest.name}}</p> 
                         <p> {{interest.description}}</p>
@@ -515,7 +525,7 @@ class __TwigTemplate_336b74f33c2750c40f0d2d40318553ae extends Template
             {# {% if current.id == profile.id %} #}
             {% if page == 'myPage' %}
                 <h2 class=\"w3-text-theme w3-center\"> My blogs</h2>
-                <a class=\"w3-button w3-margin-bottom w3-margin-right w3-theme w3-right\" href=\"/blogs/create\"><i class=\"fa fa-plus\"></i>Addd Blog</a>
+                <a class=\"w3-button w3-margin-bottom w3-margin-right w3-theme w3-right\" href=\"{{ path ('blog-create')}}\"><i class=\"fa fa-plus\"></i>Addd Blog</a>
 
             {% else %}
                 <h2 class=\"w3-text-theme w3-center\"> {{profile.name}} blogs</h2>
@@ -527,8 +537,8 @@ class __TwigTemplate_336b74f33c2750c40f0d2d40318553ae extends Template
             <div class=\"w3-container w3-card w3-white w3-round w3-margin-bottom\"><br>
 
                 {% if page =='myPage' %}
-                 <a href=\"/blogs/edit/{{blog.id}}\" class=\"w3-button w3-theme \"><i class=\"fa fa-edit\"></i> Edit</a>
-                <a href=\"/blogs/delete/{{blog.id}}\"   class=\"w3-button w3-red  \" style=\"margin-right: 10px;\"><i class=\"fa fa-eraser\"></i> Delete</a>
+                 <a href=\"{{ path ('blog-edit', { 'id' : blog.id } ) }}\" class=\"w3-button w3-theme \"><i class=\"fa fa-edit\"></i> Edit</a>
+                <a href=\"{{ path ('blog-delete', { 'id' : blog.id } ) }}\"   class=\"w3-button w3-red  \" style=\"margin-right: 10px;\"><i class=\"fa fa-eraser\"></i> Delete</a>
                 {% endif %}
                 <div >
                     <br>
@@ -572,7 +582,7 @@ class __TwigTemplate_336b74f33c2750c40f0d2d40318553ae extends Template
                     </div>     #}
 
 
-                    <a href=\"/blogs/{{blog.id}}\" type=\"button\" class=\"w3-button w3-theme w3-center w3-margin-bottom\"><i class=\"fa fa-info\"></i> Show more</a> 
+                    <a href=\"{{ path ('blog', { 'id' : blog.id } ) }}\" type=\"button\" class=\"w3-button w3-theme w3-center w3-margin-bottom\"><i class=\"fa fa-info\"></i> Show more</a> 
       
     
                     <br>
@@ -594,6 +604,6 @@ class __TwigTemplate_336b74f33c2750c40f0d2d40318553ae extends Template
 <br>
 
 
-{% endblock %}", "profiles/profile.html.twig", "/Users/andriiirkha/Documents/Symfony/blog-front/blog-front/templates/profiles/profile.html.twig");
+{% endblock %}", "profiles/profile.html.twig", "/Users/andriiirkha/Documents/Symfony/project/blog-front/templates/profiles/profile.html.twig");
     }
 }

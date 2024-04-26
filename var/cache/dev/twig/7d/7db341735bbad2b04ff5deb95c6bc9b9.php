@@ -59,6 +59,6 @@ class __TwigTemplate_ff2fa6d7109fbda63c173bfb309ebbdd extends Template
 
     public function getSourceContext()
     {
-        return new Source("", "blogs/edit.html.twig", "/Users/andriiirkha/Documents/Symfony/blog-front/blog-front/templates/blogs/edit.html.twig");
+        return new Source("", "blogs/edit.html.twig", "/Users/andriiirkha/Documents/Symfony/project/blog-front/templates/blogs/edit.html.twig");
     }
 }

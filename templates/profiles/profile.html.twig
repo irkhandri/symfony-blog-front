@@ -53,7 +53,7 @@
                       <br> 
 
                     {%  if page =='myPage' %}
-                    <a href="/profiles/edit/{{profile.id}}" class="w3-button w3-theme w3-right w3-right"><i class="fa fa-edit"></i> Edit Profile</a>
+                    <a href="{{ path ('edit-profile', { 'id' : profile.id } ) }}" class="w3-button w3-theme w3-right w3-right"><i class="fa fa-edit"></i> Edit Profile</a>
                     {% endif %}
 
                 </div>
@@ -62,7 +62,8 @@
                 <!-- Send Message -->
                 {% if page != 'myPage'%}
                 <div class=" w3-white w3-margin w3-padding w3-center">
-                    <a href="/create-message/{{profile.id}}" class="w3-button w3-theme w3-margin"><i class="fa fa-envelope"></i> Send Message</a>
+                
+                    <a href="{{ path ('create-message', { 'id' : profile.id } ) }}" class="w3-button w3-theme w3-margin"><i class="fa fa-envelope"></i> Send Message</a>
                 </div>
                 {% endif %}
 
@@ -84,7 +85,7 @@
             <div class="w3-card w3-round w3-white  ">
 
                     {% if page  == 'myPage' %}
-                        <a class="w3-button w3-theme w3-right" href="/interest-create"><i class="fa fa-plus"></i>Add Interest</a>
+                        <a class="w3-button w3-theme w3-right" href="{{ path ('interest-create')}}"><i class="fa fa-plus"></i>Add Interest</a>
                     {% endif %}
 
                 <div class="w3-container ">
@@ -92,8 +93,9 @@
                 
                     {% for interest in profile.interests %}
                         {% if page  == 'myPage' %}
-                            <a href="/interest-delete/{{interest.id}}"   class="w3-button w3-red w3-right " style="margin-left: 10px;"><i class="fa fa-eraser"></i> Delete</a>
-                            <a href="/interest-edit/{{interest.id}}" class="w3-button w3-theme w3-right "><i class="fa fa-edit"></i> Edit</a>
+                        
+                            <a href="{{ path ('interest-delete', { 'id' : interest.id } ) }}"   class="w3-button w3-red w3-right " style="margin-left: 10px;"><i class="fa fa-eraser"></i> Delete</a>
+                            <a href="{{ path ('interest-edit', { 'id' : interest.id } ) }}" class="w3-button w3-theme w3-right "><i class="fa fa-edit"></i> Edit</a>
                         {% endif %}
                         <p class=" w3-tag  w3-text-white  w3-theme">{{interest.name}}</p> 
                         <p> {{interest.description}}</p>
@@ -110,7 +112,7 @@
             {# {% if current.id == profile.id %} #}
             {% if page == 'myPage' %}
                 <h2 class="w3-text-theme w3-center"> My blogs</h2>
-                <a class="w3-button w3-margin-bottom w3-margin-right w3-theme w3-right" href="/blogs/create"><i class="fa fa-plus"></i>Addd Blog</a>
+                <a class="w3-button w3-margin-bottom w3-margin-right w3-theme w3-right" href="{{ path ('blog-create')}}"><i class="fa fa-plus"></i>Addd Blog</a>
 
             {% else %}
                 <h2 class="w3-text-theme w3-center"> {{profile.name}} blogs</h2>
@@ -122,8 +124,8 @@
             <div class="w3-container w3-card w3-white w3-round w3-margin-bottom"><br>
 
                 {% if page =='myPage' %}
-                 <a href="/blogs/edit/{{blog.id}}" class="w3-button w3-theme "><i class="fa fa-edit"></i> Edit</a>
-                <a href="/blogs/delete/{{blog.id}}"   class="w3-button w3-red  " style="margin-right: 10px;"><i class="fa fa-eraser"></i> Delete</a>
+                 <a href="{{ path ('blog-edit', { 'id' : blog.id } ) }}" class="w3-button w3-theme "><i class="fa fa-edit"></i> Edit</a>
+                <a href="{{ path ('blog-delete', { 'id' : blog.id } ) }}"   class="w3-button w3-red  " style="margin-right: 10px;"><i class="fa fa-eraser"></i> Delete</a>
                 {% endif %}
                 <div >
                     <br>
@@ -167,7 +169,7 @@
                     </div>     #}
 
 
-                    <a href="/blogs/{{blog.id}}" type="button" class="w3-button w3-theme w3-center w3-margin-bottom"><i class="fa fa-info"></i> Show more</a> 
+                    <a href="{{ path ('blog', { 'id' : blog.id } ) }}" type="button" class="w3-button w3-theme w3-center w3-margin-bottom"><i class="fa fa-info"></i> Show more</a> 
       
     
                     <br>

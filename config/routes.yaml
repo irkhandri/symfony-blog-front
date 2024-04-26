@@ -1,13 +1,9 @@
 
-app_blogs:
-    path: /blogs
-    controller: 'App\Controller\BlogController::index'
-    methods: [GET] 
-
 
 controllers:
     resource:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+    # prefix: /public
 

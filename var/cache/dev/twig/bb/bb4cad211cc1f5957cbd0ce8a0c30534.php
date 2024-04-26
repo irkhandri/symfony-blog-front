@@ -77,14 +77,20 @@ class __TwigTemplate_d7660836cf1bdca6ade306483c6da924 extends Template
         ";
         // line 37
         echo "
-        <a href=\"/blogs\" class=\"w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white  \" ><i class=\"fa fa-book\"></i>  Blogs</a>
+        <a href=\"";
+        // line 38
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("blogs");
+        echo "\" class=\"w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white  \" ><i class=\"fa fa-book\"></i>  Blogs</a>
 
         <!-- <a class=\"w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2\" href=\"javascript:void(0);\" onclick=\"openNav()\"><i class=\"fa fa-bars\"></i></a> -->
         <!-- <a href=\"#\" class=\"w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white\" title=\"News\"><i class=\"fa fa-globe\"></i></a> -->
 
         <!-- <a href=\"events.html\" class=\"w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white\" title=\"Events\"><i class=\"fa fa-calendar \"></i></a> -->
         
-        <a href=\"/profiles\" class=\"w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white \" title=\"Groups\"><i class=\"fa fa-group \"></i>  Authors</a>
+        <a href=\"";
+        // line 45
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profiles");
+        echo "\" class=\"w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white \" title=\"Groups\"><i class=\"fa fa-group \"></i>  Authors</a>
 
 
 
@@ -95,44 +101,56 @@ class __TwigTemplate_d7660836cf1bdca6ade306483c6da924 extends Template
         // line 51
         if ((isset($context["inside"]) || array_key_exists("inside", $context) ? $context["inside"] : (function () { throw new RuntimeError('Variable "inside" does not exist.', 51, $this->source); })())) {
             // line 52
-            echo "        <a href=\"/inbox-messages\" class=\"w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white \" title=\"Messages\"><i class=\"fa fa-envelope\"></i>  Messages</a>
-        <a href=\"/account\" class=\"w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white \"><i class=\"fa fa-home \"></i> MyBlog</a>
+            echo "        <a href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inbox-messages");
+            echo "\" class=\"w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white \" title=\"Messages\"><i class=\"fa fa-envelope\"></i>  Messages</a>
+        <a href=\"";
+            // line 53
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("account");
+            echo "\" class=\"w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white \"><i class=\"fa fa-home \"></i> MyBlog</a>
 
         ";
             // line 56
             echo "
         
-        <a href=\"/profiles\" class=\"w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white\" title=\"My Account\">
-            ";
+        ";
+            // line 59
+            echo "            ";
             // line 60
-            echo "        </a>
+            echo "        ";
+            // line 61
+            echo "        <a href=\"  ";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("logout");
+            echo "\" class=\"w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white  w3-right\" > Logout  </a>
+
+
+        ";
+        } else {
+            // line 65
+            echo "        <a href=\"  ";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
+            echo "\" class=\"w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white  w3-right\" > Log/Sign</a>
 
         ";
         }
-        // line 63
-        echo "        <a href=\"/";
-        echo ((((isset($context["inside"]) || array_key_exists("inside", $context) ? $context["inside"] : (function () { throw new RuntimeError('Variable "inside" does not exist.', 63, $this->source); })()) != null)) ? ("logout") : ("login"));
-        echo "\" class=\"w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white  w3-right\" > ";
-        echo ((((isset($context["inside"]) || array_key_exists("inside", $context) ? $context["inside"] : (function () { throw new RuntimeError('Variable "inside" does not exist.', 63, $this->source); })()) != null)) ? ("Logout") : ("Log/Sign"));
-        echo " </a>
-
-
+        // line 68
+        echo "
 
 ";
-        // line 68
+        // line 71
         echo "        ";
-        // line 70
-        echo "
-
-        ";
         // line 73
         echo "
+
         ";
-        // line 75
+        // line 76
+        echo "
+        ";
+        // line 78
         echo "
 
         ";
-        // line 78
+        // line 81
         echo "
         
     </div>
@@ -141,12 +159,12 @@ class __TwigTemplate_d7660836cf1bdca6ade306483c6da924 extends Template
  <br> <br>
 
     ";
-        // line 96
+        // line 99
         echo "
     ";
-        // line 97
-        $this->displayBlock('body', $context, $blocks);
         // line 100
+        $this->displayBlock('body', $context, $blocks);
+        // line 103
         echo "
 
 
@@ -172,14 +190,14 @@ class __TwigTemplate_d7660836cf1bdca6ade306483c6da924 extends Template
 
     }
 
-    // line 97
+    // line 100
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 98
+        // line 101
         echo "    
     ";
         
@@ -208,7 +226,7 @@ class __TwigTemplate_d7660836cf1bdca6ade306483c6da924 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  183 => 98,  176 => 97,  163 => 4,  150 => 100,  148 => 97,  145 => 96,  136 => 78,  132 => 75,  129 => 73,  125 => 70,  123 => 68,  113 => 63,  108 => 60,  103 => 56,  98 => 52,  96 => 51,  93 => 50,  79 => 37,  72 => 31,  61 => 21,  58 => 13,  47 => 4,  42 => 1,);
+        return array (  201 => 101,  194 => 100,  181 => 4,  168 => 103,  166 => 100,  163 => 99,  154 => 81,  150 => 78,  147 => 76,  143 => 73,  141 => 71,  137 => 68,  130 => 65,  122 => 61,  120 => 60,  118 => 59,  114 => 56,  109 => 53,  104 => 52,  102 => 51,  99 => 50,  92 => 45,  82 => 38,  79 => 37,  72 => 31,  61 => 21,  58 => 13,  47 => 4,  42 => 1,);
     }
 
     public function getSourceContext()
@@ -250,33 +268,36 @@ class __TwigTemplate_d7660836cf1bdca6ade306483c6da924 extends Template
 
         {# {% if request.path == '/' %} w3-theme-d5 {% endif %} #}
 
-        <a href=\"/blogs\" class=\"w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white  \" ><i class=\"fa fa-book\"></i>  Blogs</a>
+        <a href=\"{{path('blogs')}}\" class=\"w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white  \" ><i class=\"fa fa-book\"></i>  Blogs</a>
 
         <!-- <a class=\"w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2\" href=\"javascript:void(0);\" onclick=\"openNav()\"><i class=\"fa fa-bars\"></i></a> -->
         <!-- <a href=\"#\" class=\"w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white\" title=\"News\"><i class=\"fa fa-globe\"></i></a> -->
 
         <!-- <a href=\"events.html\" class=\"w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white\" title=\"Events\"><i class=\"fa fa-calendar \"></i></a> -->
         
-        <a href=\"/profiles\" class=\"w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white \" title=\"Groups\"><i class=\"fa fa-group \"></i>  Authors</a>
+        <a href=\"{{path('profiles')}}\" class=\"w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white \" title=\"Groups\"><i class=\"fa fa-group \"></i>  Authors</a>
 
 
 
         {# {% if request.user.is_authenticated %} #}
 
         {% if inside  %}
-        <a href=\"/inbox-messages\" class=\"w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white \" title=\"Messages\"><i class=\"fa fa-envelope\"></i>  Messages</a>
-        <a href=\"/account\" class=\"w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white \"><i class=\"fa fa-home \"></i> MyBlog</a>
+        <a href=\"{{path('inbox-messages')}}\" class=\"w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white \" title=\"Messages\"><i class=\"fa fa-envelope\"></i>  Messages</a>
+        <a href=\"{{path('account')}}\" class=\"w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white \"><i class=\"fa fa-home \"></i> MyBlog</a>
 
         {# <a href=\"/blogs/create\" class=\"w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white \"><i class=\"fa fa-edit\"></i> Add new Blog</a> #}
 
         
-        <a href=\"/profiles\" class=\"w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white\" title=\"My Account\">
+        {# <a href=\"/profiles\" class=\"w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white\" title=\"My Account\"> #}
             {# <img src=\"{{app.user.profile.imageUrl}}\" class=\"w3-circle\" style=\"height:27px;width:27px\" alt=\"Avatar\">  #}
-        </a>
+        {# </a> #}
+        <a href=\"  {{ path ('logout') }}\" class=\"w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white  w3-right\" > Logout  </a>
+
+
+        {% else  %}
+        <a href=\"  {{ path ('login') }}\" class=\"w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white  w3-right\" > Log/Sign</a>
 
         {%  endif %}
-        <a href=\"/{{ inside != null   ? 'logout' : 'login' }}\" class=\"w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white  w3-right\" > {{ inside != null  ? 'Logout' : 'Log/Sign'}} </a>
-
 
 
 {# !!!!!!!!!!!!!!!!!! #}
@@ -319,6 +340,6 @@ class __TwigTemplate_d7660836cf1bdca6ade306483c6da924 extends Template
 </body>
 
 {# <script src=\"{% static 'styles/app.js' %}\"></script> #}
-", "base.html.twig", "/Users/andriiirkha/Documents/Symfony/project/blog-front/blog-front/templates/base.html.twig");
+", "base.html.twig", "/Users/andriiirkha/Documents/Symfony/project/blog-front/templates/base.html.twig");
     }
 }

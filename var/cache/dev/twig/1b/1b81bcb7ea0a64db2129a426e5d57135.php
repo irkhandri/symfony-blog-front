@@ -131,7 +131,10 @@ class __TwigTemplate_4755637cd95c4f77a47faeda65ab210d extends Template
 
                 <div class=\"w3-center\">
                     <p>Already have an Account?</p>
-                    <a class=\"w3-button w3-theme\" href=\"/login\">Log In</a>
+                    <a class=\"w3-button w3-theme\" href=\"";
+        // line 72
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
+        echo "\">Log In</a>
                   </div>
 
 
@@ -172,7 +175,7 @@ class __TwigTemplate_4755637cd95c4f77a47faeda65ab210d extends Template
      */
     public function getDebugInfo()
     {
-        return array (  141 => 115,  120 => 58,  114 => 56,  112 => 55,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  144 => 115,  136 => 72,  120 => 58,  114 => 56,  112 => 55,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -248,7 +251,7 @@ class __TwigTemplate_4755637cd95c4f77a47faeda65ab210d extends Template
 
                 <div class=\"w3-center\">
                     <p>Already have an Account?</p>
-                    <a class=\"w3-button w3-theme\" href=\"/login\">Log In</a>
+                    <a class=\"w3-button w3-theme\" href=\"{{ path ('login')}}\">Log In</a>
                   </div>
 
 
@@ -299,6 +302,6 @@ class __TwigTemplate_4755637cd95c4f77a47faeda65ab210d extends Template
 </div>
 
 {% endblock %}
-", "profiles/register.html.twig", "/Users/andriiirkha/Documents/Symfony/project/blog-front/blog-front/templates/profiles/register.html.twig");
+", "profiles/register.html.twig", "/Users/andriiirkha/Documents/Symfony/project/blog-front/templates/profiles/register.html.twig");
     }
 }

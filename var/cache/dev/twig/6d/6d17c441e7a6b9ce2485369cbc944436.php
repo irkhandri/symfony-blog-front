@@ -219,6 +219,6 @@ class __TwigTemplate_e5f5fc1ac53ae67b7ab8efba706173b8 extends Template
     </div>
 
 
-{% endblock %}", "interest/interest.html.twig", "/Users/andriiirkha/Documents/Symfony/blog-front/blog-front/templates/interest/interest.html.twig");
+{% endblock %}", "interest/interest.html.twig", "/Users/andriiirkha/Documents/Symfony/project/blog-front/templates/interest/interest.html.twig");
     }
 }

@@ -18,11 +18,13 @@ transform: translate(-50%, -50%);">
             <p class="w3-right">{{(mess.created.date|date("d/m/Y H:i")) }}</p>
 
             {% if mess.sender.name %}
-            <p>From: <a style="text-decoration: none;font-weight: bold;" href="/profiles/{{mess.sender.id}}">{{mess.sender.name}}</a></p> 
+            <p>From: <a style="text-decoration: none;font-weight: bold;" 
+            
+                href="{{ path ('profile', { 'id' : mess.sender.id } ) }}">{{mess.sender.name}}  </a></p> 
             {% else %}
             <p>From: {{mess.email}}</p> 
             {% endif %}
-            <p>To: <a style="text-decoration: none;font-weight: bold;" href="/profiles/{{mess.recipient.id}}">{{mess.recipient.name}}</a></p> 
+            <p>To: <a style="text-decoration: none;font-weight: bold;" href="{{ path ('profile', { 'id' : mess.recipient.id } ) }}">{{mess.recipient.name}}</a></p> 
             <p >Subject: {{mess.subject}}</p>
             <hr>
             <p>{{mess.text }}   </p>

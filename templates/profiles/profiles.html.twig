@@ -56,10 +56,11 @@
                        
                             {% endif %} #}
                         {# {% else %} #}
-                                <a href="/create-message/{{profile.id}}" class="w3-button w3-theme w3-hover-gray w3-margin"><i class="fa fa-envelope"></i> Send Message</a>
+                        
+                                <a href="{{ path ('create-message', { 'id' : profile.id } ) }}" class="w3-button w3-theme w3-hover-gray w3-margin"><i class="fa fa-envelope"></i> Send Message</a>
                         {# {% endif %}  #}
                                                  
-                        <a href="/profiles/{{profile.id}}">
+                        <a href="{{ path ('profile', { 'id' : profile.id } ) }}">
                             <button  class="w3-button w3-theme w3-margin"><i class="fa fa-info"></i> About </button>
                         </a>
                     </div>

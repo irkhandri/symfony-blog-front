@@ -146,10 +146,11 @@ class __TwigTemplate_f9c7ceb882950ee3c0e5d43b608dc1b3 extends Template
                            
                         </div>  
                         <br>
-                        <a href=\"/blogs/";
+                        <a href=\"";
             // line 60
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["blog"], "id", [], "any", false, false, false, 60), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("blog", ["id" => twig_get_attribute($this->env, $this->source, $context["blog"], "id", [], "any", false, false, false, 60)]), "html", null, true);
             echo "\"><button class=\"w3-button w3-theme w3-margin\"><i class=\"fa fa-info\"></i> Show more</button></a>
+                        
                     </div>
                 </div>
 
@@ -158,7 +159,7 @@ class __TwigTemplate_f9c7ceb882950ee3c0e5d43b608dc1b3 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['blog'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 65
+        // line 66
         echo "
     
             </div>
@@ -168,7 +169,7 @@ class __TwigTemplate_f9c7ceb882950ee3c0e5d43b608dc1b3 extends Template
             
 
         ";
-        // line 74
+        // line 75
         echo "
    
 </div>
@@ -202,7 +203,7 @@ class __TwigTemplate_f9c7ceb882950ee3c0e5d43b608dc1b3 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  172 => 74,  162 => 65,  151 => 60,  144 => 56,  139 => 54,  133 => 51,  129 => 49,  120 => 47,  116 => 46,  111 => 44,  106 => 42,  102 => 41,  97 => 38,  93 => 37,  59 => 5,  52 => 4,  35 => 1,);
+        return array (  173 => 75,  163 => 66,  151 => 60,  144 => 56,  139 => 54,  133 => 51,  129 => 49,  120 => 47,  116 => 46,  111 => 44,  106 => 42,  102 => 41,  97 => 38,  93 => 37,  59 => 5,  52 => 4,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -266,7 +267,8 @@ class __TwigTemplate_f9c7ceb882950ee3c0e5d43b608dc1b3 extends Template
                            
                         </div>  
                         <br>
-                        <a href=\"/blogs/{{blog.id}}\"><button class=\"w3-button w3-theme w3-margin\"><i class=\"fa fa-info\"></i> Show more</button></a>
+                        <a href=\"{{ path ('blog', { 'id' : blog.id } ) }}\"><button class=\"w3-button w3-theme w3-margin\"><i class=\"fa fa-info\"></i> Show more</button></a>
+                        
                     </div>
                 </div>
 
@@ -286,6 +288,6 @@ class __TwigTemplate_f9c7ceb882950ee3c0e5d43b608dc1b3 extends Template
 
 
 
-{% endblock %}", "blogs/blogs.html.twig", "/Users/andriiirkha/Documents/Symfony/project/blog-front/blog-front/templates/blogs/blogs.html.twig");
+{% endblock %}", "blogs/blogs.html.twig", "/Users/andriiirkha/Documents/Symfony/project/blog-front/templates/blogs/blogs.html.twig");
     }
 }

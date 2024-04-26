@@ -252,6 +252,6 @@ class __TwigTemplate_e8c6172db3b1b48210c72e2f2a9b0be3 extends Template
     </div>
 
 
-{% endblock %}", "blogs/create.html.twig", "/Users/andriiirkha/Documents/Symfony/blog-front/blog-front/templates/blogs/create.html.twig");
+{% endblock %}", "blogs/create.html.twig", "/Users/andriiirkha/Documents/Symfony/project/blog-front/templates/blogs/create.html.twig");
     }
 }

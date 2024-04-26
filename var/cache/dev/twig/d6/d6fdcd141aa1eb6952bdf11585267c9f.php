@@ -378,6 +378,6 @@ class __TwigTemplate_7b9667834fab6a4b08696aac54b41433 extends Template
     </div>
 
 
-{% endblock %}", "profiles/edit.html.twig", "/Users/andriiirkha/Documents/Symfony/blog-front/blog-front/templates/profiles/edit.html.twig");
+{% endblock %}", "profiles/edit.html.twig", "/Users/andriiirkha/Documents/Symfony/project/blog-front/templates/profiles/edit.html.twig");
     }
 }

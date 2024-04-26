@@ -55,7 +55,7 @@ class MessageController extends AbstractController
     }
 
 
-    #[Route('/outbox-messages', name: 'app_message')]
+    #[Route('/outbox-messages', name: 'outbox-messages')]
     public function outbox(): Response
     {
         $url = 'http://127.0.0.1:8001/api/';
