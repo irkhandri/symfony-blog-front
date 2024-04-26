@@ -1,0 +1,138 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="w3-container w3-white w3-card  w3-content w3-padding-24" style="max-width: 600px; margin-top: 80px;">
+        <h2  class="w3-text-theme w3-center"> Edit profile </h2>
+            <br>
+                <div class="w3-container" >
+               
+                <form action="" method="POST">
+
+                        <!-- Input:Email -->
+                        <div class="w3-padding">
+                        <label for="formInput#text">Name: </label>
+                        <input
+                            id="formInput#text"
+                            type="text"
+                            name="name"
+                            placeholder="Enter name..."
+                            value="{{profile.name}}"
+                        />
+                        </div>
+                
+                        <div class="w3-padding">
+                        <label for="formInput#text">Username: </label>
+                        <input
+                            id="formInput#text"
+                            type="text"
+                            name="username"
+                            value="{{profile.username}}"
+                            placeholder="Enter username..."
+                        />
+                        </div>
+
+                        {# <div class="w3-padding">
+                        <label for="formInput#text">Email: </label>
+                        <input
+                            id="formInput#text"
+                            type="text"
+                            name="email"
+                            value="{{profile.email}}"
+                            placeholder="Enter username..."
+                        />
+                        </div> #}
+
+                         <div class="w3-padding">
+                        <label for="formInput#text">Image: </label>
+                        <input
+                            id="formInput#text"
+                            type="text"
+                            name="imageUrl"
+                            value="{{profile.imageUrl}}"
+                            placeholder="Enter image IRL..."
+                        />
+                        </div>
+
+
+                        <div class="w3-padding">
+                        <label for="formInput#text">Intro: </label>
+                        <input
+                            id="formInput#text"
+                            type="text"
+                            name="intro"
+                            value="{{profile.intro}}"
+                            placeholder="Enter intro..."
+                        />
+                        </div>
+
+                        <div class="w3-padding">
+                        <label for="formInput#text">Biography: </label>
+                        <input
+                            id="formInput#text"
+                            type="text"
+                            name="bio"
+                            value="{{profile.bio}}"
+                            placeholder="Enter bio..."
+                        />
+                        </div>
+
+                        <div class="w3-padding">
+                        <label for="formInput#text">Number: </label>
+                        <input
+                            id="formInput#text"
+                            type="text"
+                            name="number"
+                            value="{{profile.number}}"
+                            placeholder="Enter number..."
+                        />
+                        </div>
+
+                        <div class="w3-padding">
+                        <label for="formInput#text">Location: </label>
+                        <input
+                            id="formInput#text"
+                            type="text"
+                            name="location"
+                            value="{{profile.location}}"
+                            placeholder="Enter location..."
+                        />
+                        </div>
+
+                       
+
+                        <div class="w3-padding">
+                        <label for="formInput#text">Facebook: </label>
+                        <input
+                            id="formInput#text"
+                            type="text"
+                            name="socFacebook"
+                            value="{{profile.soc_facebook}}"
+                            placeholder="Enter facebook link..."
+                        />
+                        </div>
+
+                        <div class="w3-padding">
+                        <label for="formInput#text">Linkedin: </label>
+                        <input
+                            id="formInput#text"
+                            type="text"
+                            name="socLinkedin"
+                            value="{{profile.soc_linkedin}}"
+                            placeholder="Enter linkedin..."
+                        />
+                        </div>
+
+
+                        <div >
+                        <input type="submit" class="w3-button w3-theme w3-margin-top" value="Edit profile"></input>
+                            <br>
+                        </div>
+
+                    </form>
+
+                </div>
+    </div>
+
+
+{% endblock %}
