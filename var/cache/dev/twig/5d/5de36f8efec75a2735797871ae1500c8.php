@@ -117,7 +117,10 @@ class __TwigTemplate_226e137ee490570943bf3a815aa7dd21 extends Template
                     <div >
                       <input type=\"submit\" class=\"w3-button w3-theme w3-margin-top\" value=\"Log In\"></input>
                         <br>
-                      <a href=\"\" class=\"w3-text-theme w3-right\" >Forget Password?</a>
+                      <a href=\"";
+        // line 58
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("reset-password");
+        echo "\" class=\"w3-text-theme w3-right\" >Forget Password?</a>
                     </div>
                   </form>
                 <!-- End Login Form -->
@@ -163,7 +166,7 @@ class __TwigTemplate_226e137ee490570943bf3a815aa7dd21 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  128 => 64,  116 => 54,  110 => 52,  108 => 51,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  131 => 64,  122 => 58,  116 => 54,  110 => 52,  108 => 51,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -225,7 +228,7 @@ class __TwigTemplate_226e137ee490570943bf3a815aa7dd21 extends Template
                     <div >
                       <input type=\"submit\" class=\"w3-button w3-theme w3-margin-top\" value=\"Log In\"></input>
                         <br>
-                      <a href=\"\" class=\"w3-text-theme w3-right\" >Forget Password?</a>
+                      <a href=\"{{ path ('reset-password')}}\" class=\"w3-text-theme w3-right\" >Forget Password?</a>
                     </div>
                   </form>
                 <!-- End Login Form -->

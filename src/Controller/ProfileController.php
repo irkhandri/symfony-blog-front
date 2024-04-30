@@ -104,6 +104,58 @@ class ProfileController extends AbstractController
     }
 
 
+    #[Route('/reset-password', name: 'reset-password',  methods:['POST', "GET"] )]
+    public function reset (Request $request)
+    {
+        $session = $request->getSession();
+        $mesERR = '';
+
+        if ($request->isMethod('POST'))
+        {     
+            $data = $request->getContent();
+            parse_str($request->getContent(), $data);
+            $data = json_encode($data);
+
+            $url = 'http://127.0.0.1:8001/reset-password';
+
+            $options = array(
+                'http' => array(
+                    'method' => 'POST',
+                    'header' => 'Content-type: application/ld+json',
+                    'content' => $data
+                )
+            );
+            $context = stream_context_create($options);
+
+            // dd($context);
+            try{
+                $response = file_get_contents($url, false, $context);
+
+               
+
+                // return $this->redirectToRoute('account');   //!!!!!!!!!!!!!!!!
+
+            } catch (Exception $e) {
+                $statusCode = $http_response_header[0];
+                if ($statusCode === 'HTTP/1.1 409 Conflict') {
+                    $mesERR = 'Email and password are required';
+                }
+                // dd($e);
+            }
+
+            return $this->redirectToRoute('login');
+
+
+
+        }
+
+
+        return $this->render('profiles/reset.html.twig', [
+            'inside' => false,
+            'error' => $mesERR
+        ]);
+    }
+
 
     #[Route('/login', methods: ['GET', 'POST'], name: 'login')]
    

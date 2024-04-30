@@ -15,6 +15,7 @@ return [
         '/inbox-messages' => [[['_route' => 'inbox-messages', '_controller' => 'App\\Controller\\MessageController::index'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'register', '_controller' => 'App\\Controller\\ProfileController::register'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/logout' => [[['_route' => 'logout', '_controller' => 'App\\Controller\\ProfileController::logout'], null, ['POST' => 0, 'GET' => 1], null, false, false, null]],
+        '/reset-password' => [[['_route' => 'reset-password', '_controller' => 'App\\Controller\\ProfileController::reset'], null, ['POST' => 0, 'GET' => 1], null, false, false, null]],
         '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\ProfileController::login'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/profiles' => [[['_route' => 'profiles', '_controller' => 'App\\Controller\\ProfileController::index'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/account' => [[['_route' => 'account', '_controller' => 'App\\Controller\\ProfileController::account'], null, null, null, false, false, null]],
