@@ -269,18 +269,21 @@ class ProfileController extends AbstractController
 
         $profile = Utils::getMyUrl('profiles/' . $id);
 
-        // dd($profile);
+        if ($profile){
+
+            // dd($profile);
 
 
-        $context = [
-            'profile' => $profile,
-            'page'=> '',
-            'inside' => $token !== null
-        ];
+            $context = [
+                'profile' => $profile,
+                'page'=> '',
+                'inside' => $token !== null
+            ];
 
 
 
-        return $this->render('profiles/profile.html.twig', $context);
+            return $this->render('profiles/profile.html.twig', $context);
+        }
 
         // $profile = Utils::getMyUrl('profiles/' . $id);
 

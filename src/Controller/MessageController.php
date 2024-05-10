@@ -112,12 +112,15 @@ class MessageController extends AbstractController
         $token = $session->get('token');
 
         $message = Utils::makeRequest($token, $url, "GET");
-        // dd($message);
-        return $this->render('message/index.html.twig', [
-            'mess' => json_decode($message, true),
-            'inside' => $token !== null
+        if ($message) {
+            // dd($message);
+            return $this->render('message/index.html.twig', [
+                'mess' => json_decode($message, true),
+                'inside' => $token !== null
 
-        ]);
+            ]);
+        }
+       
     }
 
 

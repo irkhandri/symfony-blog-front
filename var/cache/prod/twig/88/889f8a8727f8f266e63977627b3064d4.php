@@ -65,7 +65,10 @@ class __TwigTemplate_f4031dc0c200fb0ba82729d168fe1d39 extends Template
 
 
     <div class=\"w3-third\">
-        <a href=\"/inbox-messages\" style=\"text-decoration: none;\" >
+        <a href=\"";
+        // line 24
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inbox-messages");
+        echo "\" style=\"text-decoration: none;\" >
         <div class=\"w3-white w3-text w3-card-4 w3-right ";
         // line 25
         if ((($context["page"] ?? null) == "in")) {
@@ -87,7 +90,10 @@ class __TwigTemplate_f4031dc0c200fb0ba82729d168fe1d39 extends Template
         echo "            </div>
         </div>
         </a>
-        <a href=\"/outbox-messages\" style=\"text-decoration: none;\" >
+        <a href=\"";
+        // line 34
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("outbox-messages");
+        echo "\" style=\"text-decoration: none;\" >
             <div class=\"w3-white w3-text w3-card-4 w3-right w3-button ";
         // line 35
         if ((($context["page"] ?? null) == "out")) {
@@ -116,60 +122,62 @@ class __TwigTemplate_f4031dc0c200fb0ba82729d168fe1d39 extends Template
         $context['_seq'] = twig_ensure_traversable(($context["messages"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["mess"]) {
             // line 52
-            echo "    <a href=\"/message/";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["mess"], "id", [], "any", false, false, false, 52), "html", null, true);
+            echo "    
+    <a href=\"";
+            // line 53
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("messages", ["id" => twig_get_attribute($this->env, $this->source, $context["mess"], "id", [], "any", false, false, false, 53)]), "html", null, true);
             echo "\" style=\"text-decoration: none;\">
         <div class=\"w3-container w3-margin w3-padding ";
-            // line 53
-            if ((twig_get_attribute($this->env, $this->source, $context["mess"], "is_read", [], "any", false, false, false, 53) == false)) {
+            // line 54
+            if ((twig_get_attribute($this->env, $this->source, $context["mess"], "is_read", [], "any", false, false, false, 54) == false)) {
                 echo " w3-theme-l4  ";
             } else {
                 echo " w3-strong ";
             }
             echo "\"
         ";
-            // line 54
-            if ((twig_get_attribute($this->env, $this->source, $context["mess"], "is_read", [], "any", false, false, false, 54) == false)) {
+            // line 55
+            if ((twig_get_attribute($this->env, $this->source, $context["mess"], "is_read", [], "any", false, false, false, 55) == false)) {
                 echo " style=\"  font-weight: bold;  \" ";
             }
             echo ">
             <p class=\"w3-right\">";
-            // line 55
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["mess"], "created", [], "any", false, false, false, 55), "date", [], "any", false, false, false, 55), "d/m/Y H:i"), "html", null, true);
+            // line 56
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["mess"], "created", [], "any", false, false, false, 56), "date", [], "any", false, false, false, 56), "d/m/Y H:i"), "html", null, true);
             echo "</p>
 
 
             <h3> From ";
-            // line 58
-            if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["mess"], "sender", [], "any", false, false, false, 58), "name", [], "any", false, false, false, 58)) {
+            // line 59
+            if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["mess"], "sender", [], "any", false, false, false, 59), "name", [], "any", false, false, false, 59)) {
                 echo " ";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["mess"], "sender", [], "any", false, false, false, 58), "name", [], "any", false, false, false, 58), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["mess"], "sender", [], "any", false, false, false, 59), "name", [], "any", false, false, false, 59), "html", null, true);
                 echo " ";
             } else {
                 echo " ";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["mess"], "getEmail", [], "any", false, false, false, 58), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["mess"], "getEmail", [], "any", false, false, false, 59), "html", null, true);
                 echo " ";
             }
             echo " </h3>
             ";
-            // line 59
+            // line 60
             if ((($context["page"] ?? null) == "out")) {
-                // line 60
+                // line 61
                 echo "                <h3> To  ";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["mess"], "recipient", [], "any", false, false, false, 60), "name", [], "any", false, false, false, 60), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["mess"], "recipient", [], "any", false, false, false, 61), "name", [], "any", false, false, false, 61), "html", null, true);
                 echo " </h3>
             ";
             }
-            // line 62
+            // line 63
             echo "
             
             <p style=\"font-weight: bold;\" >Subject : ";
-            // line 64
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["mess"], "subject", [], "any", false, false, false, 64), "html", null, true);
+            // line 65
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["mess"], "subject", [], "any", false, false, false, 65), "html", null, true);
             echo " </p>
             <p >";
-            // line 65
-            echo twig_escape_filter($this->env, twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["mess"], "text", [], "any", false, false, false, 65), 0, 120), "html", null, true);
+            // line 66
+            echo twig_escape_filter($this->env, twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["mess"], "text", [], "any", false, false, false, 66), 0, 120), "html", null, true);
             echo "</p>
         </div>
     </a>
@@ -179,7 +187,7 @@ class __TwigTemplate_f4031dc0c200fb0ba82729d168fe1d39 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['mess'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 70
+        // line 71
         echo "</div>
     
 
@@ -213,7 +221,7 @@ class __TwigTemplate_f4031dc0c200fb0ba82729d168fe1d39 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  183 => 70,  172 => 65,  168 => 64,  164 => 62,  158 => 60,  156 => 59,  144 => 58,  138 => 55,  132 => 54,  124 => 53,  119 => 52,  115 => 51,  101 => 39,  93 => 35,  87 => 31,  81 => 29,  79 => 28,  71 => 25,  50 => 6,  46 => 5,  35 => 1,);
+        return array (  191 => 71,  180 => 66,  176 => 65,  172 => 63,  166 => 61,  164 => 60,  152 => 59,  146 => 56,  140 => 55,  132 => 54,  128 => 53,  125 => 52,  121 => 51,  107 => 39,  99 => 35,  95 => 34,  90 => 31,  84 => 29,  82 => 28,  74 => 25,  70 => 24,  50 => 6,  46 => 5,  35 => 1,);
     }
 
     public function getSourceContext()

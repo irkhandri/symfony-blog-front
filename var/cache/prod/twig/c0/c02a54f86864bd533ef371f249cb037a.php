@@ -70,39 +70,42 @@ transform: translate(-50%, -50%);\">
         // line 20
         if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["mess"] ?? null), "sender", [], "any", false, false, false, 20), "name", [], "any", false, false, false, 20)) {
             // line 21
-            echo "            <p>From: <a style=\"text-decoration: none;font-weight: bold;\" href=\"/profiles/";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["mess"] ?? null), "sender", [], "any", false, false, false, 21), "id", [], "any", false, false, false, 21), "html", null, true);
+            echo "            <p>From: <a style=\"text-decoration: none;font-weight: bold;\" 
+            
+                href=\"";
+            // line 23
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profile", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["mess"] ?? null), "sender", [], "any", false, false, false, 23), "id", [], "any", false, false, false, 23)]), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["mess"] ?? null), "sender", [], "any", false, false, false, 21), "name", [], "any", false, false, false, 21), "html", null, true);
-            echo "</a></p> 
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["mess"] ?? null), "sender", [], "any", false, false, false, 23), "name", [], "any", false, false, false, 23), "html", null, true);
+            echo "  </a></p> 
             ";
         } else {
-            // line 23
+            // line 25
             echo "            <p>From: ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["mess"] ?? null), "email", [], "any", false, false, false, 23), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["mess"] ?? null), "email", [], "any", false, false, false, 25), "html", null, true);
             echo "</p> 
             ";
         }
-        // line 25
-        echo "            <p>To: <a style=\"text-decoration: none;font-weight: bold;\" href=\"/profiles/";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["mess"] ?? null), "recipient", [], "any", false, false, false, 25), "id", [], "any", false, false, false, 25), "html", null, true);
+        // line 27
+        echo "            <p>To: <a style=\"text-decoration: none;font-weight: bold;\" href=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profile", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["mess"] ?? null), "recipient", [], "any", false, false, false, 27), "id", [], "any", false, false, false, 27)]), "html", null, true);
         echo "\">";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["mess"] ?? null), "recipient", [], "any", false, false, false, 25), "name", [], "any", false, false, false, 25), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["mess"] ?? null), "recipient", [], "any", false, false, false, 27), "name", [], "any", false, false, false, 27), "html", null, true);
         echo "</a></p> 
             <p >Subject: ";
-        // line 26
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["mess"] ?? null), "subject", [], "any", false, false, false, 26), "html", null, true);
+        // line 28
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["mess"] ?? null), "subject", [], "any", false, false, false, 28), "html", null, true);
         echo "</p>
             <hr>
             <p>";
-        // line 28
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["mess"] ?? null), "text", [], "any", false, false, false, 28), "html", null, true);
+        // line 30
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["mess"] ?? null), "text", [], "any", false, false, false, 30), "html", null, true);
         echo "   </p>
         </div>
     </div>
     <div class=\"w3-container w3-center \">
         ";
-        // line 37
+        // line 39
         echo "
     </div>
 </div>
@@ -135,7 +138,7 @@ transform: translate(-50%, -50%);\">
      */
     public function getDebugInfo()
     {
-        return array (  106 => 37,  99 => 28,  94 => 26,  87 => 25,  81 => 23,  73 => 21,  71 => 20,  66 => 18,  50 => 4,  46 => 3,  35 => 1,);
+        return array (  109 => 39,  102 => 30,  97 => 28,  90 => 27,  84 => 25,  77 => 23,  73 => 21,  71 => 20,  66 => 18,  50 => 4,  46 => 3,  35 => 1,);
     }
 
     public function getSourceContext()

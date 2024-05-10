@@ -199,7 +199,10 @@ class __TwigTemplate_faa44ff5b928a64dd6f5501f0382eafe extends Template
 ($context["inside"] ?? null)) {
             // line 117
             echo "                <h3> You can not comment, you must log in</h3>
-                <a href=\"/login\" class=\"w3-button w3-theme  \"><i class=\"fa fa\"></i> Log In</a>
+                <a href=\"";
+            // line 118
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
+            echo "\" class=\"w3-button w3-theme  \"><i class=\"fa fa\"></i> Log In</a>
 
                    ";
         }
@@ -237,19 +240,23 @@ class __TwigTemplate_faa44ff5b928a64dd6f5501f0382eafe extends Template
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["comment"], "created", [], "any", false, false, false, 138), "date", [], "any", false, false, false, 138), "d/m/Y H:i"), "html", null, true);
             echo "</p>
                       
-                              <a href=\"/profiles/";
-            // line 140
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["comment"], "profile", [], "any", false, false, false, 140), "id", [], "any", false, false, false, 140), "html", null, true);
+
+
+                              <a href=\"";
+            // line 142
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profile", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["comment"], "profile", [], "any", false, false, false, 142), "id", [], "any", false, false, false, 142)]), "html", null, true);
             echo "\" ><h4>";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["comment"], "profile", [], "any", false, false, false, 140), "name", [], "any", false, false, false, 140), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["comment"], "profile", [], "any", false, false, false, 142), "name", [], "any", false, false, false, 142), "html", null, true);
             echo "</h4></a>
-                              <p class=\"w3-right w3-opacity w3-text-theme\">I ";
-            // line 141
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "rate", [], "any", false, false, false, 141), "html", null, true);
+
+                              ";
+            // line 145
+            echo "                              <p class=\"w3-right w3-opacity w3-text-theme\">I ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "rate", [], "any", false, false, false, 145), "html", null, true);
             echo " it .</p>
                               <p>";
-            // line 142
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "description", [], "any", false, false, false, 142), "html", null, true);
+            // line 146
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "description", [], "any", false, false, false, 146), "html", null, true);
             echo "</p>
                               
                           </div>
@@ -260,7 +267,7 @@ class __TwigTemplate_faa44ff5b928a64dd6f5501f0382eafe extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comment'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 148
+        // line 152
         echo "  
           </div>
   
@@ -337,7 +344,7 @@ class __TwigTemplate_faa44ff5b928a64dd6f5501f0382eafe extends Template
      */
     public function getDebugInfo()
     {
-        return array (  264 => 148,  252 => 142,  248 => 141,  242 => 140,  237 => 138,  231 => 135,  224 => 130,  220 => 129,  214 => 125,  212 => 124,  210 => 123,  207 => 121,  201 => 117,  199 => 116,  174 => 93,  171 => 91,  169 => 90,  163 => 86,  161 => 85,  152 => 79,  147 => 77,  139 => 72,  132 => 67,  123 => 65,  119 => 64,  113 => 61,  110 => 60,  105 => 47,  98 => 40,  75 => 23,  73 => 22,  69 => 19,  65 => 17,  50 => 4,  46 => 3,  35 => 1,);
+        return array (  271 => 152,  259 => 146,  254 => 145,  247 => 142,  240 => 138,  234 => 135,  227 => 130,  223 => 129,  217 => 125,  215 => 124,  213 => 123,  210 => 121,  204 => 118,  201 => 117,  199 => 116,  174 => 93,  171 => 91,  169 => 90,  163 => 86,  161 => 85,  152 => 79,  147 => 77,  139 => 72,  132 => 67,  123 => 65,  119 => 64,  113 => 61,  110 => 60,  105 => 47,  98 => 40,  75 => 23,  73 => 22,  69 => 19,  65 => 17,  50 => 4,  46 => 3,  35 => 1,);
     }
 
     public function getSourceContext()

@@ -137,10 +137,11 @@ class __TwigTemplate_459205b407899f0faf3a8a1846d0ce5e extends Template
                            
                         </div>  
                         <br>
-                        <a href=\"/blogs/";
+                        <a href=\"";
             // line 60
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["blog"], "id", [], "any", false, false, false, 60), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("blog", ["id" => twig_get_attribute($this->env, $this->source, $context["blog"], "id", [], "any", false, false, false, 60)]), "html", null, true);
             echo "\"><button class=\"w3-button w3-theme w3-margin\"><i class=\"fa fa-info\"></i> Show more</button></a>
+                        
                     </div>
                 </div>
 
@@ -149,7 +150,7 @@ class __TwigTemplate_459205b407899f0faf3a8a1846d0ce5e extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['blog'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 65
+        // line 66
         echo "
     
             </div>
@@ -159,7 +160,7 @@ class __TwigTemplate_459205b407899f0faf3a8a1846d0ce5e extends Template
             
 
         ";
-        // line 74
+        // line 75
         echo "
    
 </div>
@@ -190,7 +191,7 @@ class __TwigTemplate_459205b407899f0faf3a8a1846d0ce5e extends Template
      */
     public function getDebugInfo()
     {
-        return array (  163 => 74,  153 => 65,  142 => 60,  135 => 56,  130 => 54,  124 => 51,  120 => 49,  111 => 47,  107 => 46,  102 => 44,  97 => 42,  93 => 41,  88 => 38,  84 => 37,  50 => 5,  46 => 4,  35 => 1,);
+        return array (  164 => 75,  154 => 66,  142 => 60,  135 => 56,  130 => 54,  124 => 51,  120 => 49,  111 => 47,  107 => 46,  102 => 44,  97 => 42,  93 => 41,  88 => 38,  84 => 37,  50 => 5,  46 => 4,  35 => 1,);
     }
 
     public function getSourceContext()

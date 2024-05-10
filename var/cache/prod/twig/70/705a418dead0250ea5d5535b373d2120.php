@@ -118,21 +118,20 @@ class __TwigTemplate_0d9692702286a4bf3f1380d115ffce6a extends Template
             // line 61
             echo "        <a href=\"  ";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("logout");
-            echo "\" class=\"w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white  w3-right\" > 'Logout'  </a>
+            echo "\" class=\"w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white  w3-right\" > Logout  </a>
+
+
+        ";
+        } else {
+            // line 65
+            echo "        <a href=\"  ";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
+            echo "\" class=\"w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white  w3-right\" > Log/Sign</a>
 
         ";
         }
-        // line 64
+        // line 68
         echo "
-
-        <a href=\"  ";
-        // line 66
-        echo (((($context["inside"] ?? null) != null)) ? ("logout") : ("login"));
-        echo "\" class=\"w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white  w3-right\" > ";
-        echo (((($context["inside"] ?? null) != null)) ? ("Logout") : ("Log/Sign"));
-        echo " </a>
-
-
 
 ";
         // line 71
@@ -209,7 +208,7 @@ class __TwigTemplate_0d9692702286a4bf3f1380d115ffce6a extends Template
      */
     public function getDebugInfo()
     {
-        return array (  187 => 101,  183 => 100,  176 => 4,  166 => 103,  164 => 100,  161 => 99,  152 => 81,  148 => 78,  145 => 76,  141 => 73,  139 => 71,  130 => 66,  126 => 64,  119 => 61,  117 => 60,  115 => 59,  111 => 56,  106 => 53,  101 => 52,  99 => 51,  96 => 50,  89 => 45,  79 => 38,  76 => 37,  69 => 31,  58 => 21,  55 => 13,  44 => 4,  39 => 1,);
+        return array (  186 => 101,  182 => 100,  175 => 4,  165 => 103,  163 => 100,  160 => 99,  151 => 81,  147 => 78,  144 => 76,  140 => 73,  138 => 71,  134 => 68,  127 => 65,  119 => 61,  117 => 60,  115 => 59,  111 => 56,  106 => 53,  101 => 52,  99 => 51,  96 => 50,  89 => 45,  79 => 38,  76 => 37,  69 => 31,  58 => 21,  55 => 13,  44 => 4,  39 => 1,);
     }
 
     public function getSourceContext()

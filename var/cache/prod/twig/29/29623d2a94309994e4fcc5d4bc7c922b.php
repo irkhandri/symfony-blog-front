@@ -113,15 +113,17 @@ class __TwigTemplate_3174af4bb3610f9a67e1655ffb57ee86 extends Template
             // line 58
             echo "                        ";
             // line 59
-            echo "                                <a href=\"/create-message/";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["profile"], "id", [], "any", false, false, false, 59), "html", null, true);
+            echo "                        
+                                <a href=\"";
+            // line 60
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("create-message", ["id" => twig_get_attribute($this->env, $this->source, $context["profile"], "id", [], "any", false, false, false, 60)]), "html", null, true);
             echo "\" class=\"w3-button w3-theme w3-hover-gray w3-margin\"><i class=\"fa fa-envelope\"></i> Send Message</a>
                         ";
-            // line 61
-            echo "                                                 
-                        <a href=\"/profiles/";
             // line 62
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["profile"], "id", [], "any", false, false, false, 62), "html", null, true);
+            echo "                                                 
+                        <a href=\"";
+            // line 63
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profile", ["id" => twig_get_attribute($this->env, $this->source, $context["profile"], "id", [], "any", false, false, false, 63)]), "html", null, true);
             echo "\">
                             <button  class=\"w3-button w3-theme w3-margin\"><i class=\"fa fa-info\"></i> About </button>
                         </a>
@@ -133,7 +135,7 @@ class __TwigTemplate_3174af4bb3610f9a67e1655ffb57ee86 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['profile'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 69
+        // line 70
         echo "
             </div>
             
@@ -141,7 +143,7 @@ class __TwigTemplate_3174af4bb3610f9a67e1655ffb57ee86 extends Template
 
 
         ";
-        // line 76
+        // line 77
         echo "   
 </div>
 
@@ -171,7 +173,7 @@ class __TwigTemplate_3174af4bb3610f9a67e1655ffb57ee86 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  145 => 76,  137 => 69,  124 => 62,  121 => 61,  116 => 59,  114 => 58,  111 => 51,  108 => 49,  104 => 47,  98 => 44,  94 => 43,  90 => 41,  86 => 40,  50 => 6,  46 => 5,  35 => 1,);
+        return array (  147 => 77,  139 => 70,  126 => 63,  123 => 62,  119 => 60,  116 => 59,  114 => 58,  111 => 51,  108 => 49,  104 => 47,  98 => 44,  94 => 43,  90 => 41,  86 => 40,  50 => 6,  46 => 5,  35 => 1,);
     }
 
     public function getSourceContext()

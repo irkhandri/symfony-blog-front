@@ -12,8 +12,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* profiles/register.html.twig */
-class __TwigTemplate_91d2b181ab82eeb827db83bbb75c99f8 extends Template
+/* profiles/reset.html.twig */
+class __TwigTemplate_7282ceb88a7e150bf320fcb163a9579b extends Template
 {
     private $source;
     private $macros = [];
@@ -38,7 +38,7 @@ class __TwigTemplate_91d2b181ab82eeb827db83bbb75c99f8 extends Template
     protected function doDisplay(array $context, array $blocks = [])
     {
         $macros = $this->macros;
-        $this->parent = $this->loadTemplate("base.html.twig", "profiles/register.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "profiles/reset.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
@@ -54,7 +54,7 @@ class __TwigTemplate_91d2b181ab82eeb827db83bbb75c99f8 extends Template
         <div class=\"w3-third\">
             <div class=\"w3-white w3-text w3-card-4\">
                 <div class=\"w3-container\">
-                    <h2 class=\"w3-text-theme w3-center\">Some greeting</h2>
+                    <h2 class=\"w3-text-theme w3-center\">RESET PASSWORD</h2>
                     <p class=\" w3-center\">Nice to meet you, welcome to us.</p>
                 </div>
             </div><br>
@@ -68,10 +68,10 @@ class __TwigTemplate_91d2b181ab82eeb827db83bbb75c99f8 extends Template
 
 
                 <h2 class=\"w3-text-theme w3-padding-16\">
-                    <i class=\"fa fa-user-plus fa-fw w3-margin-right w3-xxlarge w3-text-theme\"></i>Sign Up
+                    <i class=\"fa fa-user-plus fa-fw w3-margin-right w3-xxlarge w3-text-theme\"></i>Reset password
                 </h2>
                 <!-- Signup Form -->
-                <h3  class=\"w3-text-theme\">Register an account</h3>
+                <h3  class=\"w3-text-theme\">Enter your password</h3>
 
                 <div class=\"w3-container\" >
 
@@ -87,55 +87,24 @@ class __TwigTemplate_91d2b181ab82eeb827db83bbb75c99f8 extends Template
                             placeholder=\"Enter your email...\"
                         />
                         </div>
-                
-                        <!-- Input:Password -->
-                        <div class=\"w3-padding\">
-                        <label for=\"formInput#password\">Password: </label>
-                        <input
-                            id=\"formInput#passowrd\"
-                            type=\"password\"
-                            name=\"password\"
-                            placeholder=\"••••••••\"
-                        />
-                        </div>
- ";
-        // line 55
+                         ";
+        // line 44
         if (($context["error"] ?? null)) {
-            // line 56
+            // line 45
             echo "                      <p class=\"w3-text-red\" > ";
             echo twig_escape_filter($this->env, ($context["error"] ?? null), "html", null, true);
             echo " </p>
                     ";
         }
-        // line 58
-        echo "                        <div >
-                        <input type=\"submit\" class=\"w3-button w3-theme w3-margin-top\" value=\"Create account\"></input>
-                            <br>
-                        <a href=\"";
-        // line 61
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("reset-password");
-        echo "\" class=\"w3-text-theme w3-right\" >Forget Password?</a>
-                        </div>
+        // line 47
+        echo "
+                        <input type=\"submit\" class=\"w3-button w3-theme w3-margin-top\" value=\"Send\"></input>
 
+                
                     </form>
 
-                   
 
                 </div>
-
-                <div class=\"w3-center\">
-                    <p>Already have an Account?</p>
-                    <a class=\"w3-button w3-theme\" href=\"";
-        // line 72
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
-        echo "\">Log In</a>
-                  </div>
-
-
-
-";
-        // line 115
-        echo "
 
             </div>
         </div>
@@ -150,7 +119,7 @@ class __TwigTemplate_91d2b181ab82eeb827db83bbb75c99f8 extends Template
      */
     public function getTemplateName()
     {
-        return "profiles/register.html.twig";
+        return "profiles/reset.html.twig";
     }
 
     /**
@@ -166,11 +135,11 @@ class __TwigTemplate_91d2b181ab82eeb827db83bbb75c99f8 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  138 => 115,  130 => 72,  116 => 61,  111 => 58,  105 => 56,  103 => 55,  50 => 4,  46 => 3,  35 => 1,);
+        return array (  100 => 47,  94 => 45,  92 => 44,  50 => 4,  46 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("", "profiles/register.html.twig", "/Users/andriiirkha/Documents/Symfony/project/blog-front/templates/profiles/register.html.twig");
+        return new Source("", "profiles/reset.html.twig", "/Users/andriiirkha/Documents/Symfony/project/blog-front/templates/profiles/reset.html.twig");
     }
 }

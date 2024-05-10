@@ -141,30 +141,35 @@ class BlogController extends AbstractController
         $token = $this->requestStack->getSession()->get('token');
         // $comments = Utils::getMyUrl('blogs/' .$id . '/comments');
         $blog = Utils::getMyUrl('blogs/' . $id);
-// dd($blog);
-        $commented = false;
-        if ($token)
-            $commented = Utils::makeRequest( $token, 'http://localhost:8001/api/commented/' . $id, "GET");
-        
-        if ($request->isMethod("POST"))
-        {
-            parse_str($request->getContent(), $data);
-            // $data = json_decode($data, true); 
-            $url = 'http://127.0.0.1:8001/api/blogs/' . $id . '/create-comment';
 
-            $res = Utils::makeRequest($token, $url, 'POST', json_encode($data) );
-            // dd($res);
-            return $this->redirectToRoute('blogs', [ 'id' => $id ] );
+        if ($blog){
+            $commented = false;
+            if ($token)
+                $commented = Utils::makeRequest( $token, 'http://localhost:8001/api/commented/' . $id, "GET");
+            
+            if ($request->isMethod("POST"))
+            {
+                parse_str($request->getContent(), $data);
+                // $data = json_decode($data, true); 
+                $url = 'http://127.0.0.1:8001/api/blogs/' . $id . '/create-comment';
+    
+                $res = Utils::makeRequest($token, $url, 'POST', json_encode($data) );
+                // dd($res);
+                return $this->redirectToRoute('blogs', [ 'id' => $id ] );
+            }
+    
+            $context = [
+                    'blog' => $blog,
+                    'inside' => $token !== null,
+                    // 'comments' => $comments,
+                    'commented' => $commented
+    
+            ];
+            return $this->render('blogs/blog.html.twig', $context );
         }
 
-        $context = [
-                'blog' => $blog,
-                'inside' => $token !== null,
-                // 'comments' => $comments,
-                'commented' => $commented
-
-        ];
-        return $this->render('blogs/blog.html.twig', $context );
+// dd($blog);
+       
     }
 
 
