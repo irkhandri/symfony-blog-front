@@ -128,20 +128,26 @@ class ProfileController extends AbstractController
             $context = stream_context_create($options);
 
             // dd($context);
-            try{
-                $response = file_get_contents($url, false, $context);
-
-               
-
-                // return $this->redirectToRoute('account');   //!!!!!!!!!!!!!!!!
-
-            } catch (Exception $e) {
-                $statusCode = $http_response_header[0];
-                if ($statusCode === 'HTTP/1.1 409 Conflict') {
-                    $mesERR = 'Email and password are required';
-                }
-                // dd($e);
+            // try{
+            $response = file_get_contents($url, false, $context);
+            $mesERR = json_decode($response, true)['error'];
+            if ($mesERR) {
+                return $this->render('profiles/reset.html.twig', [
+                    'inside' => false,
+                    'error' => $mesERR
+                ]);
             }
+
+
+
+            // } 
+            // catch (Exception $e) {
+            //     $statusCode = $http_response_header[0];
+            //     if ($statusCode === 'HTTP/1.1 409 Conflict') {
+            //         $mesERR = 'Email and password are required';
+            //     }
+            //     // dd($e);
+            // }
 
             return $this->redirectToRoute('login');
 
@@ -182,25 +188,51 @@ class ProfileController extends AbstractController
             );
             $context = stream_context_create($options);
 
-            try{
-                $response = file_get_contents($url, false, $context);
 
-                $token = json_decode($response, true)['token'];
+            $response = file_get_contents($url, false, $context);
 
+            $token = json_decode($response, true)['token'];
+
+            if ($token){
                 $session->set('token', $token);
-                // dd($token);
-
                 return $this->redirectToRoute('account');   //!!!!!!!!!!!!!!!!
-
-            } catch (Exception $e) {
-                $statusCode = $http_response_header[0];
-                if ($statusCode === 'HTTP/1.1 409 Conflict') {
-                    $mesERR = 'Email and password are required';
-                }
-                if ($statusCode === 'HTTP/1.1 400 Bad Request') {
-                    $mesERR = 'Invalid email or password';
-                }
             }
+
+            else {
+                $mesERR = json_decode($response, true)['error'];
+                return $this->render('profiles/login.html.twig',[
+                    'inside' => null,
+                    'error' => $mesERR
+                ]);
+
+            }
+
+
+
+
+            // try{
+            //     $response = file_get_contents($url, false, $context);
+            //     // if ($response){
+            //         dd($response);
+            //         $token = json_decode($response, true)['token'];
+
+            //         $session->set('token', $token);
+            //         return $this->redirectToRoute('account');   //!!!!!!!!!!!!!!!!
+            //     // }
+            //     // dd($token);
+
+               
+
+            // } catch (Exception $e) {
+            //     dd('gefe');
+            //     $statusCode = $http_response_header[0];
+            //     if ($statusCode === 'HTTP/1.1 409 Conflict') {
+            //         $mesERR = 'Email and password are required';
+            //     }
+            //     if ($statusCode === 'HTTP/1.1 400 Bad Request') {
+            //         $mesERR = 'Invalid email or password';
+            //     }
+            // }
             
 
             // return $this->redirectToRoute('login');   //!!!!!!!!!!!!!!!!
