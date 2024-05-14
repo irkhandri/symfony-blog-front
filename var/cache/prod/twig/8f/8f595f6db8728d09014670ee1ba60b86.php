@@ -74,12 +74,12 @@ class __TwigTemplate_081e03a2d7f0a6b4898562731dfca4bd extends Template
                 <form action=\"\" method=\"POST\">
                     <!-- Input:Username -->
                     <div class=\"w3-padding\">
-                      <label for=\"formInput#text\">Username: </label>
+                      <label for=\"formInput#text\">Email: </label>
                       <input
                         id=\"formInput#text\"
                         type=\"text\"
                         name=\"email\"
-                        placeholder=\"Enter your email...\"
+                        placeholder=\"Enter your email....\"
                       />
                     </div>
             

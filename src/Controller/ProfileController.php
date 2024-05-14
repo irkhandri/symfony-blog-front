@@ -39,6 +39,8 @@ class ProfileController extends AbstractController
     public function register (Request $request)
     {
         $mesERR = '';
+        $session = $request->getSession();
+
         if ($request->isMethod('POST')){
             
             $data = $request->getContent();
@@ -56,22 +58,40 @@ class ProfileController extends AbstractController
             );
 
             $context = stream_context_create($options);
+            $response = file_get_contents($url, false, $context);
 
-            try{
-                $response = file_get_contents($url, false, $context);
+            $token = json_decode($response, true)['token'];
 
-                return $this->redirectToRoute('login');   //!!!!!!!!!!!!!!!!
+            if ($token){
+                $session->set('token', $token);
+                dd('here');
+                return $this->redirectToRoute('account');   //!!!!!!!!!!!!!!!!
+            }
 
-            } catch (Exception $e) {
-                $statusCode = $http_response_header[0];
-                if ($statusCode === 'HTTP/1.1 409 Conflict') {
-                    $mesERR = 'User with this email already exists';
-                }
-                if ($statusCode === 'HTTP/1.1 400 Bad Request') {
-                    $mesERR = 'Email and password are required';
-                }
+            else {
+                $mesERR = json_decode($response, true)['error'];
+                return $this->render('profiles/register.html.twig',[
+                    'inside' => null,
+                    'error' => $mesERR
+                ]);
 
             }
+
+            // try{
+            //     $response = file_get_contents($url, false, $context);
+
+            //     return $this->redirectToRoute('login');   //!!!!!!!!!!!!!!!!
+
+            // } catch (Exception $e) {
+            //     $statusCode = $http_response_header[0];
+            //     if ($statusCode === 'HTTP/1.1 409 Conflict') {
+            //         $mesERR = 'User with this email already exists';
+            //     }
+            //     if ($statusCode === 'HTTP/1.1 400 Bad Request') {
+            //         $mesERR = 'Email and password are required';
+            //     }
+
+            // }
 
             
         }

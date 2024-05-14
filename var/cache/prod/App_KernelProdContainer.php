@@ -16,7 +16,7 @@ if (!\class_exists(App_KernelProdContainer::class, false)) {
 
 return new \Container3SurGHZ\App_KernelProdContainer([
     'container.build_hash' => '3SurGHZ',
-    'container.build_id' => 'fbdba6a3',
-    'container.build_time' => 1715326961,
+    'container.build_id' => '0931f846',
+    'container.build_time' => 1715679966,
     'container.runtime_mode' => \in_array(\PHP_SAPI, ['cli', 'phpdbg', 'embed'], true) ? 'web=0' : 'web=1',
 ], __DIR__.\DIRECTORY_SEPARATOR.'Container3SurGHZ');
