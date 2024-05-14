@@ -20,9 +20,8 @@
   
             {# <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-theme"></i>{{blog.owner.email}}</p> #}
             {# <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-theme"></i>{{blog.owner.mobil}}</p> #}
-            <p></p><i class="fa fa-user fa-fw w3-margin-right w3-large w3-text-theme"></i>Author:  <a href="/profiles/{{blog.profile.id}}"> {{blog.profile.name}}</a> </p>
+            <p></p><i class="fa fa-user fa-fw w3-margin-right w3-large w3-text-theme"></i>Author:  <a href=" {{path ('profile', { 'id' : blog.profile.id  } ) }}"> {{blog.profile.name}}</a> </p>
   
-           
           </div>
   
         </div><br>
